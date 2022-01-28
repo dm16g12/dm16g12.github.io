@@ -292,9 +292,9 @@
         }
 
         function loadATeam(name) {
-            let url = new URL('https://api.twitch.tv/helix/teams');
+            let url = new URL('https://api.twitch.tv/helix/streams/followed?user_id=');
             let params = {
-                name
+                client_id
             };
 
             url.search = new URLSearchParams(params).toString();
