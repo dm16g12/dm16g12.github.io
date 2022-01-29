@@ -199,6 +199,8 @@
         <tr><td>ths</td><td>The Hammer Squad</td></tr>
     </table>
 
+    <p id="redirect_value">target</p>
+
     <a href="" id="authorize" target="barrysgithubtwitchauth">Authorize</a>
     <div id="different_team">
         <form action="" method="post" id="different_team_form">
@@ -250,7 +252,7 @@
 
             loadATeam('loadedllc');
 
-            console.log(redirect);
+            document.getElementById('redirect_value').textContent = `redirect value = ${redirect}`;
 
             document.getElementById('different_team_field').removeAttribute('disabled');
         }
