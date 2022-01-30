@@ -266,11 +266,17 @@
                 if (resp.data && resp.data.length == 1) {
                     let team = resp.data[0];
                     let { users } = team;
+                    let result = " ";
+
+                    users.array.forEach(user => {
+                        result += user.user_id;
+                    });
                     
 
                     console.log(users[0]);
+                    console.log(result);
 
-                    document.getElementById('response').textContent = { users };                 
+                    document.getElementById('response').textContent = result;                 
                     
 
                     
