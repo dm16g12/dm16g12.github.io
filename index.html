@@ -293,93 +293,12 @@
                         user.profile_image_url = '';
                     });
 
-                    //console.log(users);
+                    console.log(users);
 
-                    let offset = 0;
-                    let offset_end = 0;
-                    let limit = 100;//both users and streams support 100 at once
+                    
+                    
 
-                    offset_end += limit;
-
-                    status.textContent = `Paging with limit ${offset}/${offset_end}/${users.length}`;
-                    let group = users.slice(offset,offset_end);
-
-                    // split the users in to groups of 100
-                    // and fetch all streams before we render the page!
-                    // normally I'd async this if JS/front only and laod streams after render
-                    // or preferably run this server side and use eventsub for stream up/down
-                    //while (group.length > 0) {
-                    while (offset < users.length) {
-                        status.textContent = `Paging with limit ${offset}/${offset_end}/${users.length}`;
-
-                        let user_ids = [];
-                        let ids = [];
-                        group.forEach(user => {
-                            // preforamt for URL params
-                            user_ids.push(['user_id', user.user_id]);
-                            ids.push(['id', user.user_id]);
-                        });
-
-                        //console.log('Run IDS', user_ids);
-
-                        status.textContent = `Load a page of streams ${offset}/${offset_end}/${users.length}`;
-                        await getStreams(user_ids)
-                            .then(resp => {
-                                //console.log('We got', resp.data.length, 'streams');
-                                if (resp.data.length > 0) {
-                                    // we got some streams
-                                    resp.data.forEach(stream => {
-                                        //console.log(stream);
-
-                                        users.forEach(user => {
-                                            if (user.user_id == stream.user_id) {
-                                                user.live = true;
-                                                user.title = stream.title;
-                                                user.category = stream.game_name;
-                                                user.viewer_count = stream.viewer_count;
-                                            }
-                                        });
-                                    });
-                                } else {
-                                    // no one on this page live
-                                }
-                            })
-                            .catch(err => {
-                                console.error(err);
-                                status.textContent = 'Failed to load streams';
-                            });
-
-                        status.textContent = `Load a page of users ${offset}/${offset_end}/${users.length}`;
-                        await getUsers(ids)
-                            .then(resp => {
-                                if (resp.data.length > 0) {
-                                    // we got some streams
-                                    resp.data.forEach(profile => {
-                                        users.forEach(user => {
-                                            if (user.user_id == profile.id) {
-                                                user.profile_image_url = profile.profile_image_url;
-                                            }
-                                        });
-                                    });
-                                } else {
-                                    // no one on this page live
-                                }
-                            })
-                            .catch(err => {
-                                console.error(err);
-                                status.textContent = 'Failed to load streams';
-                            });
-
-                        status.textContent = `Grab Next ${offset}/${offset_end}/${users.length}`;
-                        offset += limit;
-                        offset_end += limit;
-                        group = users.slice(offset,offset_end);
-                    }
-                    //console.log(team.users);
-
-                    status.textContent = 'Go for Build';
-                    console.log('Go for build');
-                    buildLayout(team);
+                    
                 } else {
                     status.textContent = 'Team Not returned, is the name correct?';
                 }
