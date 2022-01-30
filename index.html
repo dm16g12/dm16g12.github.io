@@ -263,21 +263,11 @@
                 // https://github.com/twitchdev/issues/issues/495
                 if (resp.data && resp.data.length == 1) {
                     let team = resp.data[0];
-                    let { users } = team;
+                    
 
-                    // base enrich
-                    users.forEach(user => {
-                        user.live = false;
-                        user.title = '';
-                        user.category = '';
-                        user.viewer_count = 0;
+                    console.log(team);
 
-                        user.profile_image_url = '';
-                    });
-
-                    console.log(users);
-
-                    document.getElementById('response').textContent(users).toString();                 
+                    document.getElementById('response').textContent(team).toString();                 
                     
 
                     
