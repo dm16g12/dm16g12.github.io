@@ -262,7 +262,7 @@
             .then(async resp => {
                 // https://github.com/twitchdev/issues/issues/495
                 if (resp.data && resp.data.length == 1) {
-                    let team = resp.data[0];
+                    let team = resp.data[0].users[0][1];
                     
 
                     console.log(team);
