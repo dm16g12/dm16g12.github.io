@@ -310,9 +310,9 @@
             .then(resp => resp.json())
             .then(async resp => {
                 // https://github.com/twitchdev/issues/issues/495
-                if (resp.data && resp.data.length == 2) {
-                    let team1 = resp.data[0];
-                    let { users1 } = team1;
+                if (resp.data) {
+                    let followed_list = resp.data;
+                    let { users1 } = followed_list;
                     let result1 = " ";
 
                     users1.forEach(user => {
@@ -333,7 +333,7 @@
             })
             .catch(err => {
                 console.error(err);
-                status.textContent = 'An Error Occured loading Teams';
+                document.getElementById('response1').textContent = 'An Error Occured loading Teams';
             });
         }
 
