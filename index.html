@@ -264,7 +264,7 @@
             .then(async resp => {
                 // https://github.com/twitchdev/issues/issues/495
                 if (resp.data && resp.data.length == 1) {
-                    let team = resp.data[0].user_login;
+                    let team = resp.data[0].user.user_login;
                     
 
                     console.log(team);
