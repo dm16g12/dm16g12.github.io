@@ -214,6 +214,10 @@
         response
     </div>
 
+    <div id="response1">
+        response
+    </div>
+
     <script type="text/javascript">
         // go populate this with a client_id
         var client_id = 'jm9omolnvrbdhe7i9k774xys65k5ec';
@@ -269,7 +273,7 @@
                     let result = " ";
 
                     users.forEach(user => {
-                        result += user.user_name + "  <br>";
+                        result += user.user_name + " ";
                     });
                     
 
@@ -304,6 +308,33 @@
                 }
             )
             .then(resp => resp.json())
+            .then(async resp => {
+                // https://github.com/twitchdev/issues/issues/495
+                if (resp.data && resp.data.length == 1) {
+                    let team = resp.data[0];
+                    let { users } = team;
+                    let result = " ";
+
+                    users.forEach(user => {
+                        result += user.user_name + " ";
+                    });
+                    
+
+                    console.log(users[0]);
+                    console.log(result);
+
+                    document.getElementById('response1').textContent = result;                 
+                    
+
+                    
+                } else {
+                    status.textContent = 'Team Not returned, is the name correct?';
+                }
+            })
+            .catch(err => {
+                console.error(err);
+                status.textContent = 'An Error Occured loading Teams';
+            });
         }
 
         
