@@ -311,19 +311,19 @@
             .then(async resp => {
                 // https://github.com/twitchdev/issues/issues/495
                 if (resp.data && resp.data.length == 1) {
-                    let team = resp.data[0];
-                    let { users } = team;
-                    let result = " ";
+                    let team1 = resp.data[0];
+                    let { users1 } = team1;
+                    let result1 = " ";
 
-                    users.forEach(user => {
-                        result += user.user_name + " ";
+                    users1.forEach(user => {
+                        result1 += user.user_name + " ";
                     });
                     
 
-                    console.log(users[0]);
-                    console.log(result);
+                    console.log(users1[0]);
+                    console.log(result1);
 
-                    document.getElementById('response1').textContent = result;                 
+                    document.getElementById('response1').textContent = result1;                 
                     
 
                     
