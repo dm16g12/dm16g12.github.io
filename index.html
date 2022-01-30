@@ -284,12 +284,8 @@
         }
 
         function myOwn(id) {
-            let url = new URL('https://api.twitch.tv/helix/streams/followed?user_id=');
-            let params = {
-                id
-            };
-
-            url.search = new URLSearchParams(id).toString();
+            let url = new URL('https://api.twitch.tv/helix/streams/followed?user_id=60600844');
+            
 
             fetch(
                 url,
