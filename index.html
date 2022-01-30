@@ -310,7 +310,7 @@
             .then(resp => resp.json())
             .then(async resp => {
                 // https://github.com/twitchdev/issues/issues/495
-                if (resp.data && resp.data.length == 1) {
+                if (resp.data && resp.data.length == 2) {
                     let team1 = resp.data[0];
                     let { users1 } = team1;
                     let result1 = " ";
