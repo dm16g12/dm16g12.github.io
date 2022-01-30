@@ -236,8 +236,6 @@
 
             status.textContent = 'Got Token. Loading Things';
 
-            loadATeam('tsm');
-
             myOwn(60600844);
 
             document.getElementById('redirect_value').textContent = `redirect value = ${redirect}`;
@@ -245,54 +243,6 @@
             document.getElementById('different_team_field').removeAttribute('disabled');
         }
 
-       
-
-        function loadATeam(name) {
-            let url = new URL('https://api.twitch.tv/helix/teams');
-            let params = {
-                name
-            };
-
-            url.search = new URLSearchParams(params).toString();
-
-            fetch(
-                url,
-                {
-                    "headers": {
-                        "Client-ID": client_id,
-                        "Authorization": "Bearer " + access_token
-                    }
-                }
-            )
-            .then(resp => resp.json())
-            .then(async resp => {
-                // https://github.com/twitchdev/issues/issues/495
-                if (resp.data && resp.data.length == 1) {
-                    let team = resp.data[0];
-                    let { users } = team;
-                    let result = " ";
-
-                    users.forEach(user => {
-                        result += user.user_name + " ";
-                    });
-                    
-
-                    console.log(users[0]);
-                    console.log(result);
-
-                    document.getElementById('response').textContent = result;                 
-                    
-
-                    
-                } else {
-                    status.textContent = 'Team Not returned, is the name correct?';
-                }
-            })
-            .catch(err => {
-                console.error(err);
-                status.textContent = 'An Error Occured loading Teams';
-            });
-        }
 
         function myOwn(id) {
             let url = new URL('https://api.twitch.tv/helix/streams/followed?user_id=60600844');
