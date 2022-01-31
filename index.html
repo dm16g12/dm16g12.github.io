@@ -274,6 +274,10 @@
                     console.log(resp.data[0].user_name);
                     console.log(user_list);
 
+                    user_list.array.forEach(user => {
+                        console.log(user.user_name);
+                    });
+
                     
                 } else {
                     status.textContent = 'Team Not returned, is the name correct?';
