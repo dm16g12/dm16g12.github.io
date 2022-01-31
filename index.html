@@ -264,6 +264,7 @@
                     let team = resp.data;
                     let user_list = []
 
+
                     let resp_length = resp.data.length;
                     document.getElementById('response').textContent = resp_length;
                     console.log(users);
@@ -271,26 +272,7 @@
                     console.log(resp.data[0]);
                     console.log(resp.data[0].user_name);
 
-                    // base enrich
-                    users.forEach(user => {
-                        user.live = false;
-                        user.title = '';
-                        user.category = '';
-                        user.viewer_count = 0;
-
-                        user.profile_image_url = '';
-                        
-                        console.log(users);
-                        console.log(team);
-
-                    let json = resp;
-
-                    Object.keys(json).forEach(key => {
-                        console.log(key, json[key]);
-                    });
-                        
                     
-                    });
                 } else {
                     status.textContent = 'Team Not returned, is the name correct?';
                 }
