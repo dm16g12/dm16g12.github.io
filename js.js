@@ -57,6 +57,8 @@ var redirect = 'https://dm16g12.github.io';
 var access_token = '';
 var user_id = '';
 
+
+// create div to show status of authorisation/retrieval process
 const status = document.getElementById('status');
 
 // setup authorise link
@@ -71,7 +73,7 @@ function processToken(token) {
 
 }
 
-
+// function to call twitch api and return data for visitor's list of followed streamers
 function myOwn(id) {
     let url = new URL('https://api.twitch.tv/helix/streams/followed?user_id=60600844');
 
