@@ -129,7 +129,7 @@
                     user_list.forEach(user => {
                         console.log(user.user_name + " " + user.type + " " + user.title + " " + user.viewer_count);
                         const li = document.createElement('li');
-                        li.appendChild(document.createTextNode(`${user.user_name}`));
+                        li.appendChild(document.createTextNode(`${user.user_name} ${user.type} ${user.title} ${user.viewer_count}`));
                         document.querySelector('ul.collection').appendChild(li);
 
                     });
