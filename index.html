@@ -263,16 +263,6 @@
                 if (resp.data.length > 0) {
                     let team = resp.data;
                     let user_list = []
-                    let json = resp;
-                    let jjson = resp.json();
-
-                    Object.keys(json).forEach(key => {
-                        console.log(key, json[key]);
-                    });
-
-                    Object.keys(jjson).forEach(key => {
-                        console.log(key, jjson[key]);
-                    });
 
                     let resp_length = resp.data.length;
                     document.getElementById('response').textContent = resp_length;
@@ -292,6 +282,12 @@
                         
                         console.log(users);
                         console.log(team);
+
+                    let json = resp;
+
+                    Object.keys(json).forEach(key => {
+                        console.log(key, json[key]);
+                    });
                         
                     
                     });
