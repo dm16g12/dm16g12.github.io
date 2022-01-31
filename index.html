@@ -260,31 +260,29 @@
             .then(resp => resp.json())
             .then(async resp => {
                 // https://github.com/twitchdev/issues/issues/495
-                if (resp.data) {
-                    let followed_list = resp.data[0];
-                    let { users1 } = followed_list;
-                    let result1 = " ";
+                if (resp.data && resp.data.length == 1) {
+                    let team = resp.data[0];
+                    let { users } = team;
 
-                    users1.forEach(user => {
-                        result1 += user.user_name + " ";
+                    // base enrich
+                    users.forEach(user => {
+                        user.live = false;
+                        user.title = '';
+                        user.category = '';
+                        user.viewer_count = 0;
+
+                        user.profile_image_url = '';
                     });
-                    
-
-                    console.log(followed_list);
-                    
-
-                    document.getElementById('response1').textContent = followed_list;                 
-                    
-
-                    
                 } else {
-                    document.getElementById('response1').textContent = 'something went wrong';
+                    status.textContent = 'Team Not returned, is the name correct?';
                 }
             })
             .catch(err => {
                 console.error(err);
-                document.getElementById('response1').textContent = 'An Error Occured loading Teams';
+                status.textContent = 'An Error Occured loading Teams';
             });
+
+            console.log(users);
         }
 
         
