@@ -11,10 +11,7 @@
             width: 100%;
         }
 
-        #team * {
-            /* fix a fun injerit from the main style */
-            background-color: inherit;
-        }
+        
         #status {
             background: #000000;
             color: #FFFFFF;
@@ -24,145 +21,7 @@
             box-sizing: border-box;
         }
 
-        #team {
-            width: 100%;
-            display: block;
-            box-sizing: border-box;
-
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-        }
-            #team_inner {
-                width: 90rem;
-                margin: auto;
-                background: #26262c;
-                display: flex;
-                margin: 20px;
-                padding: 20px;
-                box-sizing: border-box;
-            }
-
-                #left, #right {
-                    margin: 10px;
-                    padding: 10px;
-                    box-sizing: border-box;
-                }
-                #left {
-                    width: 25%;
-                }
-                    #logo {
-                        width: 250px;
-                        height: 250px;
-                        background-size: contain;
-                        background-repeat: no-repeat;
-                        margin: auto;
-                    }
-
-                    #team_count {
-                        float: right;
-                    }
-
-                        #team_members_list {
-                            height: 500px;
-                            overflow: auto;
-                        }
-                        #team_members_list>div {
-                            height: 30px;
-                            line-height: 30px;
-                            padding: 0px 5px;
-                            position: relative;
-                            cursor: pointer;
-                        }
-                        #team_members_list>div:hover {
-                            background: #464649;
-                        }
-                            .pfp {
-                                background-size: 25px 25px;
-                                background-repeat: no-repeat;
-                                background-position: center;
-                                border-radius: 50%;
-                                width: 25px;
-                                height: 25px;
-                                display: inline-block;
-                                margin-right: 5px;
-                            }
-                        #team_members_list .name {
-                            display: inline-block;
-                            line-height: 30px;
-                            font-size: 15px;
-                        }
-                        #team_members_list .live {
-                            position: absolute;
-                            top: 0px;
-                            right: 5px;
-                        }
-                            .live:before {
-                                content: '';
-                                width: 10px;
-                                height: 10px;
-                                display: block;
-                                background: red;
-                                border-radius: 50%;
-                                position: absolute;
-                                top: 9px;
-                                left: -15px;
-                            }
-                #right {
-                    width: 75%;
-                }
-                    #banner {
-                        width: 100%;
-                        height: 13rem;
-
-                        background-size: contain;
-                        background-repeat: no-repeat;
-                    }
-
-                    #player_top,
-                    #player_bottom {
-                        position: relative;
-                    }
-
-                    #player_top>div,
-                    #player_bottom>div {
-                        vertical-align: top;
-                        display: inline-block;
-                        line-height: 30px;
-                    }
-                    .boxart {
-                        width: 40px;
-                        height: 55px;
-                        margin: 10px;
-                    }
-/*
-                    #team_description {
-                        padding: 20px 0px;
-                    }
-*/
-
-                    .info {
-                        position: absolute;
-                        top: 0px;
-                        right: 20px;
-                        cursor: pointer;
-                        background: rgba(255,255,255,0.15);
-                        border-radius: 10px;
-                    }
-                    .info_widget {
-                        position: absolute;
-                        width: 200px;
-                        padding: 20px;
-                        padding: 20px;
-                        background: #18181b;
-
-                        box-shadow: 2px 2px #000000;
-                    }
-
-
-                #team_members_list,
-                #player {
-                    background: #18181b;
-                }
+        
     </style>
     <script src="https://embed.twitch.tv/embed/v1.js"></script>
 
@@ -187,17 +46,6 @@
     </script>
 </head>
 <body>
-    <p>This example first uses <a href="https://dev.twitch.tv/docs/authentication/getting-tokens-oauth#oauth-implicit-code-flow" target="_blank">Implicit Auth</a> to get a token to use then will Various endpoints. Generally calls will be done/cached server side with an <a href="https://dev.twitch.tv/docs/authentication/getting-tokens-oauth#oauth-client-credentials-flow" target="_blank">App Access Token</a></p>
-
-    <p>Get the code for this example on <a href="https://github.com/BarryCarlyon/twitch_misc/tree/main/examples/team">Github</a> or just View the source instead</p>
-
-    <p>Teams to try
-    <table>
-        <tr><td>Different Team Value</td><td>Team Name</td></tr>
-        <tr><td>7311</td><td>Twitch Ambassadors</td></tr>
-        <tr><td>loadedllc</td><td>Loaded</td></tr>
-        <tr><td>ths</td><td>The Hammer Squad</td></tr>
-    </table>
 
     <p id="redirect_value">target</p>
 
@@ -217,6 +65,10 @@
     <div id="response1">
         response
     </div>
+
+    <ul class="collection">
+
+    </ul>
 
     <script type="text/javascript">
         // go populate this with a client_id
@@ -273,11 +125,16 @@
                     console.log(resp.data[0]);
                     console.log(resp.data[0].user_name);
                     console.log(user_list);
+                    const li = document.createElement('li');
 
                     user_list.forEach(user => {
                         console.log(user.user_name + " " + user.type + " " + user.title + " " + user.viewer_count);
+                        li.appendChild(document.createTextNode(`${user.user_name}`));
+                        document.querySelector('ul.collection').appendChild(li);
 
                     });
+
+                    li.appendChild(document.createTextNode(`${user.user_name}`))
 
                     
                 } else {
