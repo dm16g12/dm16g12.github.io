@@ -130,7 +130,7 @@
                         console.log(user.user_name + " " + user.type + " " + user.title + " " + user.viewer_count);
                         const li = document.createElement('li');
                         const link = document.createElement('a');
-                        link.setAttribute('href', `https://www.twitch.tv/${usuer.user_login}`);
+                        link.setAttribute('href', `https://www.twitch.tv/${user.user_login}`);
                         link.appendChild(li);
                         li.appendChild(document.createTextNode(`${user.user_name} ${user.type} ${user.title} ${user.viewer_count}`));
                         document.querySelector('ul.collection').appendChild(link);
