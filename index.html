@@ -260,9 +260,11 @@
             .then(resp => resp.json())
             .then(async resp => {
                 // https://github.com/twitchdev/issues/issues/495
-                if (resp.data && resp.data.length == 1) {
+                if (resp.data) {
                     let team = resp.data[0];
                     let { users } = team;
+                    let resp_length = resp.data.length;
+                    document.getElementById('response').textContent = resp_length;
 
                     // base enrich
                     users.forEach(user => {
@@ -272,6 +274,8 @@
                         user.viewer_count = 0;
 
                         user.profile_image_url = '';
+                        
+                    
                     });
                 } else {
                     status.textContent = 'Team Not returned, is the name correct?';
