@@ -92,7 +92,7 @@ function myOwn(id) {
 
             if (resp.data.length > 0) {
                 let team = resp.data;
-                let user_list = []
+                let user_list = [];
                 user_list = resp.data;
 
 
