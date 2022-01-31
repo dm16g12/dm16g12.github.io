@@ -48,24 +48,6 @@ xlm.onmessage = (event) => {
     lastPrice4 = price4;
 }
 
-if (document.location.hash && document.location.hash != '') {
-    var parsedHash = new URLSearchParams(window.location.hash.substr(1));
-    if (parsedHash.get('access_token')) {
-        if (window.opener) {
-            window.opener.processToken(parsedHash.get('access_token'));
-            window.close();
-        }
-    }
-}
-
-if (document.location.search && document.location.search != '') {
-    var parsedParams = new URLSearchParams(window.location.search);
-    if (parsedParams.get('error_description')) {
-        document.getElementById('status').classList.add('show');
-        document.getElementById('status').textContent = 'Looks like you Tried to oAuth Authenticate and Somethibg went wrong: ' + parsedParams.get('error') + ' - ' + parsedParams.get('error_description');
-    }
-}
-
 
         // go populate this with a client_id
         var client_id = 'jm9omolnvrbdhe7i9k774xys65k5ec';
