@@ -261,7 +261,7 @@
             .then(async resp => {
                 // https://github.com/twitchdev/issues/issues/495
                 if (resp.data) {
-                    let followed_list = resp.data;
+                    let followed_list = resp.data[0];
                     let { users1 } = followed_list;
                     let result1 = " ";
 
