@@ -97,7 +97,7 @@ function myOwn(id) {
 
 
                 let resp_length = resp.data.length;
-                document.getElementById('response').textContent = resp_length;
+                //document.getElementById('response').textContent = resp_length;
 
                 console.log(resp.data);
                 console.log(resp.data[0]);
