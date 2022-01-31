@@ -1,3 +1,5 @@
+//scripts for crypto prices
+
 let xrp = new WebSocket('wss://stream.binance.com:9443/ws/xrpusdt@trade');
 let stockPriceElement = document.getElementById('stock-price1');
 let lastPrice = null;
@@ -9,7 +11,7 @@ xrp.onmessage = (event) => {
     stockPriceElement.innerText = `XRP: ${price}`;
     stockPriceElement.style.color = !lastPrice || lastPrice === price ? '#fff' : price > lastPrice ? 'green' : 'red';
     lastPrice = price;
-    
+
 }
 
 let shib = new WebSocket('wss://stream.binance.com:9443/ws/shibusdt@trade');
@@ -48,81 +50,79 @@ xlm.onmessage = (event) => {
     lastPrice4 = price4;
 }
 
+// personal twitch id / redirect
+var client_id = 'jm9omolnvrbdhe7i9k774xys65k5ec';
+var redirect = 'https://dm16g12.github.io';
+// setup a memory space for the token/userID
+var access_token = '';
+var user_id = '';
 
-        // personal twitch id / redirect
-        var client_id = 'jm9omolnvrbdhe7i9k774xys65k5ec';
-        var redirect = 'https://dm16g12.github.io';
-        // setup a memory space for the token/userID
-        var access_token = '';
-        var user_id = '';
+const status = document.getElementById('status');
 
-        const status = document.getElementById('status');
+// setup authorise link
+document.getElementById('authorise').setAttribute('href', 'https://id.twitch.tv/oauth2/authorize?client_id=' + client_id + '&redirect_uri=' + encodeURIComponent(redirect) + '&response_type=token&scope=user:read:follows')
 
-        // setuo authorise link
-        document.getElementById('authorise').setAttribute('href', 'https://id.twitch.tv/oauth2/authorize?client_id=' + client_id + '&redirect_uri=' + encodeURIComponent(redirect) + '&response_type=token&scope=user:read:follows')
+function processToken(token) {
+    access_token = token;
 
-        function processToken(token) {
-            access_token = token;
+    status.textContent = 'Got Token. Loading Things';
 
-            status.textContent = 'Got Token. Loading Things';
+    myOwn(60600844);
 
-            myOwn(60600844);
+}
 
+
+function myOwn(id) {
+    let url = new URL('https://api.twitch.tv/helix/streams/followed?user_id=60600844');
+
+
+    fetch(
+        url,
+        {
+            "headers": {
+                "Client-ID": client_id,
+                "Authorization": "Bearer " + access_token
+            }
         }
+    )
+        .then(resp => resp.json())
+        .then(async resp => {
+
+            if (resp.data.length > 0) {
+                let team = resp.data;
+                let user_list = []
+                user_list = resp.data;
 
 
-        function myOwn(id) {
-            let url = new URL('https://api.twitch.tv/helix/streams/followed?user_id=60600844');
-            
+                let resp_length = resp.data.length;
+                document.getElementById('response').textContent = resp_length;
 
-            fetch(
-                url,
-                {
-                    "headers": {
-                        "Client-ID": client_id,
-                        "Authorization": "Bearer " + access_token
-                    }
-                }
-            )
-            .then(resp => resp.json())
-            .then(async resp => {
-                
-                if (resp.data.length > 0) {
-                    let team = resp.data;
-                    let user_list = []
-                    user_list = resp.data;
+                console.log(resp.data);
+                console.log(resp.data[0]);
+                console.log(resp.data[0].user_name);
+                console.log(user_list);
+
+                user_list.forEach(user => {
+                    console.log(user.user_name + " " + user.type + " " + user.title + " " + user.viewer_count);
+                    const li = document.createElement('li');
+                    const link = document.createElement('a');
+                    link.setAttribute('href', `https://www.twitch.tv/${user.user_login}`);
+                    link.appendChild(li);
+                    li.appendChild(document.createTextNode(`${user.user_name} ${user.viewer_count}`));
+                    document.querySelector('ul.collection').appendChild(link);
+
+                });
 
 
-                    let resp_length = resp.data.length;
-                    document.getElementById('response').textContent = resp_length;
-                    
-                    console.log(resp.data);
-                    console.log(resp.data[0]);
-                    console.log(resp.data[0].user_name);
-                    console.log(user_list);
+            } else {
+                status.textContent = 'Team Not returned, is the name correct?';
+            }
+        })
+        .catch(err => {
+            console.error(err);
+            status.textContent = 'An Error Occured loading Teams';
+        });
 
-                    user_list.forEach(user => {
-                        console.log(user.user_name + " " + user.type + " " + user.title + " " + user.viewer_count);
-                        const li = document.createElement('li');
-                        const link = document.createElement('a');
-                        link.setAttribute('href', `https://www.twitch.tv/${user.user_login}`);
-                        link.appendChild(li);
-                        li.appendChild(document.createTextNode(`${user.user_name} ${user.viewer_count}`));
-                        document.querySelector('ul.collection').appendChild(link);
 
-                    });
+}
 
-                    
-                } else {
-                    status.textContent = 'Team Not returned, is the name correct?';
-                }
-            })
-            .catch(err => {
-                console.error(err);
-                status.textContent = 'An Error Occured loading Teams';
-            });
-
-            
-        }
-
-        
