@@ -49,14 +49,14 @@ xlm.onmessage = (event) => {
 }
 
 
-        // go populate this with a client_id
+        // personal twitch id / redirect
         var client_id = 'jm9omolnvrbdhe7i9k774xys65k5ec';
         var redirect = 'https://dm16g12.github.io';
         // setup a memory space for the token/userID
         var access_token = '';
         var user_id = '';
 
-        let status = document.getElementById('status');
+        const status = document.getElementById('status');
 
         // setuo authorise link
         document.getElementById('authorise').setAttribute('href', 'https://id.twitch.tv/oauth2/authorize?client_id=' + client_id + '&redirect_uri=' + encodeURIComponent(redirect) + '&response_type=token&scope=user:read:follows')
@@ -68,9 +68,6 @@ xlm.onmessage = (event) => {
 
             myOwn(60600844);
 
-            document.getElementById('redirect_value').textContent = `redirect value = ${redirect}`;
-
-            document.getElementById('different_team_field').removeAttribute('disabled');
         }
 
 
@@ -89,7 +86,7 @@ xlm.onmessage = (event) => {
             )
             .then(resp => resp.json())
             .then(async resp => {
-                // https://github.com/twitchdev/issues/issues/495
+                
                 if (resp.data.length > 0) {
                     let team = resp.data;
                     let user_list = []
