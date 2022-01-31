@@ -99,10 +99,10 @@ function myOwn(id) {
                 let resp_length = resp.data.length;
                 //document.getElementById('response').textContent = resp_length;
 
-                console.log(resp.data);
-                console.log(resp.data[0]);
-                console.log(resp.data[0].user_name);
-                console.log(user_list);
+                //console.log(resp.data);
+                //console.log(resp.data[0]);
+                //console.log(resp.data[0].user_name);
+                //console.log(user_list);
 
                 user_list.forEach(user => {
                     console.log(user.user_name + " " + user.type + " " + user.title + " " + user.viewer_count);
