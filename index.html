@@ -132,7 +132,7 @@
                         const link = document.createElement('a');
                         link.setAttribute('href', `https://www.twitch.tv/${user.user_login}`);
                         link.appendChild(li);
-                        li.appendChild(document.createTextNode(`${user.user_name} ${user.type} ${user.title} ${user.viewer_count}`));
+                        li.appendChild(document.createTextNode(`${user.user_name} ${user.viewer_count}`));
                         document.querySelector('ul.collection').appendChild(link);
 
                     });
