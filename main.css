@@ -139,6 +139,11 @@ h1, h2, p {
     left: 25%;
 }
 
+.collection {
+    position: fixed;
+    display: block;
+}
+
 #particles-js {
     background: #eeeeee;
     height: 100vh;
