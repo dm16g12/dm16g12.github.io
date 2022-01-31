@@ -62,7 +62,7 @@ var user_id = '';
 const status = document.getElementById('status');
 
 // setup authorise link
-document.getElementById('authorise').setAttribute('href', 'https://id.twitch.tv/oauth2/authorize?client_id=' + client_id + '&redirect_uri=' + encodeURIComponent(redirect) + '&response_type=token&scope=user:read:follows')
+document.getElementById('authorize').setAttribute('href', 'https://id.twitch.tv/oauth2/authorize?client_id=' + client_id + '&redirect_uri=' + encodeURIComponent(redirect) + '&response_type=token&scope=user:read:follows')
 
 function processToken(token) {
     access_token = token;
