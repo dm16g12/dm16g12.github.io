@@ -160,6 +160,7 @@ function myOwn(id) {
 
                 //popUserList();
                 //buildOutList();
+                allTogether(user_name_list, user_login_list, view_count_list);
 
 
             } else {
