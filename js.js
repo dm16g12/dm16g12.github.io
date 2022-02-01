@@ -127,7 +127,7 @@ function myOwn(id) {
                 //console.log(user_login_list);
                 //console.log(view_count_list);
 
-                function allTogether(a, b, c) {
+                function allTogether(a, b) {
                     for (let i = 0; i < a.length; i++) {
 
                         let li = document.createElement('li');
@@ -153,7 +153,7 @@ function myOwn(id) {
                     }
                 }
 
-                allTogether(user_name_list, user_login_list, view_count_list);
+                allTogether(user_name_list, user_login_list);
                 buildOutList(view_count_list);
 
 
