@@ -136,28 +136,12 @@ function myOwn(id) {
                         link.appendChild(li);
                         li.appendChild(document.createTextNode(`${a[i]}`));
                         document.querySelector('ul.collection').appendChild(link);
-                        
+
                         console.log('allTogether worked');
                         //console.log(a[i]);
                         //console.log(b[i]);
                         //console.log(c[i]);
                     }
-                }
-
-
-                function popUserList() {
-                    user_list.forEach(user => {
-                        let li = document.createElement('li');
-                        let link = document.createElement('a');
-                        link.setAttribute('href', `https://www.twitch.tv/${user.user_login}`);
-                        link.appendChild(li);
-                        li.appendChild(document.createTextNode(`${user.user_name}`));
-                        document.querySelector('ul.collection').appendChild(link);
-
-                        let view_count = user.viewer_count;
-                        //console.log(view_count);  
-                        //console.log('popUserList worked');                    
-                    });
                 }
 
                 function buildOutList(c) {
@@ -169,8 +153,6 @@ function myOwn(id) {
                     }
                 }
 
-                //popUserList();
-                //buildOutList();
                 allTogether(user_name_list, user_login_list, view_count_list);
                 buildOutList(view_count_list);
 
