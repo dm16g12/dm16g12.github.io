@@ -160,16 +160,19 @@ function myOwn(id) {
                     });
                 }
 
-                function buildOutList() {
-                    let li1 = document.createElement('li');
-                    li1.appendChild(document.createTextNode(`${view_count}`));
-                    document.querySelector('div.viewers').appendChild(li1);
-                    console.log('buildOutList worked');
+                function buildOutList(c) {
+                    for (let i = 0; i < c.length; i++) {
+                        let vDiv_p = document.createElement('div');
+                        vDiv_p.appendChild(document.createTextNode(`${c[i]}`));
+                        document.querySelector('div.viewers').appendChild(vDiv_p);
+                        console.log('buildOutList worked');
+                    }
                 }
 
                 //popUserList();
                 //buildOutList();
                 allTogether(user_name_list, user_login_list, view_count_list);
+                buildOutList(view_count_list);
 
 
             } else {
