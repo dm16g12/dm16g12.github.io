@@ -127,15 +127,15 @@ function myOwn(id) {
                 //console.log(user_login_list);
                 //console.log(view_count_list);
 
-                function createUserDiv(arr) {
-                    for (let i = 0; i < arr.length; i++) {
+                function createUserDiv() {
+                    for (let i = 0; i < user_name_list.length; i++) {
                         let div = document.createElement('div');
                         document.getElementById('twitch_extension').appendChild(div);
                     }
 
                 }
 
-                createUserDiv(user_list);
+                createUserDiv();
 
 
             } else {
