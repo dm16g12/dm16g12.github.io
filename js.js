@@ -168,7 +168,7 @@ function myOwn(id) {
                 function buildOutList() {
                     let li1 = document.createElement('li');
                     li1.appendChild(document.createTextNode(`${view_count}`));
-                    document.querySelector('ul.viewers').appendChild(li1);
+                    document.querySelector('div.viewers').appendChild(li1);
                     console.log('buildOutList worked');
                 }
 
