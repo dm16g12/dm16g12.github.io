@@ -170,6 +170,7 @@ h1, h2, p {
     box-sizing: border-box;
     border-style: solid;
     justify-content: space-between;
+    padding-top: 20px;
 }
 
 /*.pfp {
@@ -179,7 +180,7 @@ h1, h2, p {
 .name {
     position: absolute;
     width: 100px;
-    padding-top: 30px;
+    
 }
 
 .viewers {
