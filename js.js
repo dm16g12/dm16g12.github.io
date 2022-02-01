@@ -73,7 +73,8 @@ function processToken(token) {
 
 }
 
-console.log(user_id);
+console.log('user id is ' + user_id);
+console.log('access_token is ' + access_token);
 
 // function to call twitch api and return data for visitor's list of followed streamers
 function myOwn(id) {
@@ -146,4 +147,7 @@ function myOwn(id) {
 
 
 }
+
+console.log('user id is ' + user_id);
+console.log('access_token is ' + access_token);
 
