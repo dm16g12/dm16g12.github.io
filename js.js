@@ -136,11 +136,11 @@ function myOwn(id) {
                 }
 
 
-                function popUserList(arr) {
-                    arr.forEach(user_login => {
+                function popUserList() {
+                    user_list.forEach(user => {
                         let li = document.createElement('li');
                         let link = document.createElement('a');
-                        link.setAttribute('href', `https://www.twitch.tv/${user_login}`);
+                        link.setAttribute('href', `https://www.twitch.tv/${user.user_login}`);
                         link.appendChild(li);
                         li.appendChild(document.createTextNode(`${user.user_name}`));
                         document.querySelector('ul.collection').appendChild(link);
@@ -158,7 +158,7 @@ function myOwn(id) {
                     console.log('buildOutList worked');
                 }
 
-                popUserList(user_list);
+                popUserList();
                 //buildOutList();
                 allTogether(user_name_list, user_login_list, view_count_list);
 
