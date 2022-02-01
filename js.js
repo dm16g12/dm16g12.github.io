@@ -129,9 +129,18 @@ function myOwn(id) {
 
                 function allTogether(a, b, c) {
                     for (let i = 0; i < a.length; i++) {
-                        console.log(a[i]);
-                        console.log(b[i]);
-                        console.log(c[i]);
+
+                        let li = document.createElement('li');
+                        let link = document.createElement('a');
+                        link.setAttribute('href', `https://www.twitch.tv/${b[i]}`);
+                        link.appendChild(li);
+                        li.appendChild(document.createTextNode(`${a[i]} ${c[i]}`));
+                        document.querySelector('ul.collection').appendChild(link);
+
+
+                        //console.log(a[i]);
+                        //console.log(b[i]);
+                        //console.log(c[i]);
                     }
                 }
 
@@ -158,7 +167,7 @@ function myOwn(id) {
                     console.log('buildOutList worked');
                 }
 
-                popUserList();
+                //popUserList();
                 //buildOutList();
                 allTogether(user_name_list, user_login_list, view_count_list);
 
