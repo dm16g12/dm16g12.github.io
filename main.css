@@ -177,11 +177,12 @@ h1, h2, p {
 }*/
 
 .name {
+    position: absolute;
     width: 100px;
 }
 
 .viewers {
-    right: 0px;
+    position: absolute;
     width: 100px;
 }
 
