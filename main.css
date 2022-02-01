@@ -151,12 +151,13 @@ h1, h2, p {
     background-color: transparent;
     z-index: 70;
     box-sizing: border-box;
+    overflow: auto;
 
 }
 
 .twitch_div {
     position: relative;
-    width: 100%;
+    
     box-sizing: border-box;
 }
 
