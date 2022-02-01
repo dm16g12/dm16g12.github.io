@@ -131,6 +131,18 @@ function myOwn(id) {
                     for (let i = 0; i < user_name_list.length; i++) {
                         let div = document.createElement('div');
                         document.getElementById('twitch_extension').appendChild(div);
+
+                        let pfp = document.createElement('span');
+                        div.append(pfp);
+                        pfp.classList.add('pfp');
+
+                        let name = document.createElement('span');
+                        div.append(name);
+                        name.classList.add('name');
+
+                        let viewers = document.createElement('span');
+                        div.append(viewers);
+                        viewers.classList.add('viewers');
                     }
 
                 }
