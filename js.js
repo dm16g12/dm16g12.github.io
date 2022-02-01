@@ -106,8 +106,26 @@ function myOwn(id) {
                 //console.log(resp.data[0].user_name);
                 //console.log(user_list);
 
+                const user_name_list = [];
+                const user_login_list = [];
+                const view_count_list = [];
+
 
                 //console.log(user.user_name + " " + user.type + " " + user.title + " " + user.viewer_count);
+
+                function cycle(arr) {
+                    arr.forEach(user => {
+                        user_name_list.push(user.user_name);
+                        user_login_list.push(user.user_login);
+                        view_count_list.push(user.viewer_count);
+                    });
+                }
+
+                cycle(user_list);
+
+                console.log(user_name_list);
+                console.log(user_login_list);
+                console.log(view_count_list);
 
 
                 function popUserList() {
@@ -132,8 +150,8 @@ function myOwn(id) {
                     console.log('buildOutList worked');
                 }
 
-                popUserList();
-                buildOutList();
+                //popUserList();
+                //buildOutList();
 
 
             } else {
