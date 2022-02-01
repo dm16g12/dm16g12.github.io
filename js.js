@@ -106,7 +106,7 @@ function myOwn(id) {
                 //console.log(user_list);
 
                 user_list.forEach(user => {
-                    console.log(user.user_name + " " + user.type + " " + user.title + " " + user.viewer_count);
+                    //console.log(user.user_name + " " + user.type + " " + user.title + " " + user.viewer_count);
                     let li = document.createElement('li');
                     let link = document.createElement('a');
                     link.setAttribute('href', `https://www.twitch.tv/${user.user_login}`);
@@ -114,9 +114,12 @@ function myOwn(id) {
                     li.appendChild(document.createTextNode(`${user.user_name}`));
                     document.querySelector('ul.collection').appendChild(link);
 
+                    console.log(user.viewer_count);
+                    let view_count = user.viewer_count;
+
                     function buildOutList() {
                         let li1 = document.createElement('li');
-                        li1.appendChild(document.createTextNode(`${user.viewer_count}`));
+                        li1.appendChild(document.createTextNode(`${view_count}`));
                         document.querySelector('ul.viewers').appendChild(li1);
                     }
                     buildOutList;
