@@ -85,6 +85,7 @@ h1, h2, p {
     background: #ddd;
     overflow: hidden;
     display: flex;
+    background-color: transparent;
 }
 
 .search-bar-container {
@@ -186,7 +187,6 @@ li {
 #particles-js {
     background: #eeeeee;
     height: 100vh;
-    z-index: 40;
 }
 
 @keyframes bg-animation {
