@@ -161,26 +161,15 @@ h1, h2, p {
 }
 
 .pfp {
-    background-size: 25px 25px;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 50%;
-    width: 25px;
-    height: 25px;
-    display: inline-block;
-    margin-right: 5px;
+    position: absolute;
 }
 
 .name {
-    display: inline-block;
-    line-height: 30px;
-    font-size: 15px;
+    position: absolute;
 }
 
 .viewers {
     position: absolute;
-    top: 0px;
-    right: 5px;
 }
 
 #particles-js {
