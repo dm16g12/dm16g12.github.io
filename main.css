@@ -172,17 +172,17 @@ h1, h2, p {
     justify-content: space-between;
 }
 
-.pfp {
+/*.pfp {
     width: auto;
-}
+}*/
 
 .name {
-    width: auto;
+    width: fit-content;
 }
 
 .viewers {
     right: 0px;
-    width: auto;
+    width: fit-content;
 }
 
 #particles-js {
