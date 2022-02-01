@@ -141,7 +141,7 @@ h1, h2, p {
 }
 
 .twitch_extension {
-    position: relative;
+    position: fixed;
     display: block;
     width: 300px;
     height: 66%;
