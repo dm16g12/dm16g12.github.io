@@ -144,6 +144,7 @@ function myOwn(id) {
                         let viewers = document.createElement('span');
                         div.append(viewers);
                         viewers.classList.add('viewers');
+                        viewers.textContent = view_count_list[i];
                     }
 
                 }
