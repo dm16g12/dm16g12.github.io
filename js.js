@@ -131,6 +131,7 @@ function myOwn(id) {
                     for (let i = 0; i < user_name_list.length; i++) {
                         let div = document.createElement('div');
                         document.getElementById('twitch_extension').appendChild(div);
+                        div.classList.add('twitch_div');
 
                         let pfp = document.createElement('span');
                         div.append(pfp);

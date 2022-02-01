@@ -142,7 +142,7 @@ h1, h2, p {
 
 .twitch_extension {
     position: fixed;
-    display: flex;
+    display: block;
     width: 300px;
     height: 66%;
     bottom: 0%;
@@ -150,6 +150,10 @@ h1, h2, p {
     border-style: solid;
     background-color: transparent;
     z-index: 70;
+
+}
+
+.twitch_div {
 
 }
 
