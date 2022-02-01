@@ -123,16 +123,24 @@ function myOwn(id) {
 
                 cycle(user_list);
 
-                console.log(user_name_list);
-                console.log(user_login_list);
-                console.log(view_count_list);
+                //console.log(user_name_list);
+                //console.log(user_login_list);
+                //console.log(view_count_list);
+
+                function allTogether(a, b, c) {
+                    for (let i = 0; i < a.length; i++) {
+                        console.log(a);
+                        console.log(b);
+                        console.log(c);
+                    }
+                }
 
 
-                function popUserList() {
-                    user_list.forEach(user => {
+                function popUserList(arr) {
+                    arr.forEach(user_login => {
                         let li = document.createElement('li');
                         let link = document.createElement('a');
-                        link.setAttribute('href', `https://www.twitch.tv/${user.user_login}`);
+                        link.setAttribute('href', `https://www.twitch.tv/${user_login}`);
                         link.appendChild(li);
                         li.appendChild(document.createTextNode(`${user.user_name}`));
                         document.querySelector('ul.collection').appendChild(link);
