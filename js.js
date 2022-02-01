@@ -105,25 +105,34 @@ function myOwn(id) {
                 //console.log(resp.data[0].user_name);
                 //console.log(user_list);
 
-                user_list.forEach(user => {
-                    //console.log(user.user_name + " " + user.type + " " + user.title + " " + user.viewer_count);
-                    let li = document.createElement('li');
-                    let link = document.createElement('a');
-                    link.setAttribute('href', `https://www.twitch.tv/${user.user_login}`);
-                    link.appendChild(li);
-                    li.appendChild(document.createTextNode(`${user.user_name}`));
-                    document.querySelector('ul.collection').appendChild(link);
 
-                    let view_count = user.viewer_count;
-                    console.log(view_count);
+                //console.log(user.user_name + " " + user.type + " " + user.title + " " + user.viewer_count);
 
-                    function buildOutList() {
-                        let li1 = document.createElement('li');
-                        li1.appendChild(document.createTextNode(`${view_count}`));
-                        document.querySelector('ul.viewers').appendChild(li1);
-                    }
-                    buildOutList;
-                });
+
+                function popUserList() {
+                    user_list.forEach(user => {
+                        let li = document.createElement('li');
+                        let link = document.createElement('a');
+                        link.setAttribute('href', `https://www.twitch.tv/${user.user_login}`);
+                        link.appendChild(li);
+                        li.appendChild(document.createTextNode(`${user.user_name}`));
+                        document.querySelector('ul.collection').appendChild(link);
+
+                        let view_count = user.viewer_count;
+                        console.log(view_count);  
+                        console.log('popUserList worked');                    
+                    });
+                }
+
+                function buildOutList() {
+                    let li1 = document.createElement('li');
+                    li1.appendChild(document.createTextNode(`${view_count}`));
+                    document.querySelector('ul.viewers').appendChild(li1);
+                    console.log('buildOutList worked');
+                }
+
+                popUserList();
+                buildOutList();
 
 
             } else {
