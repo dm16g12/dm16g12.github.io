@@ -114,8 +114,8 @@ function myOwn(id) {
                     li.appendChild(document.createTextNode(`${user.user_name}`));
                     document.querySelector('ul.collection').appendChild(link);
 
-                    console.log(user.viewer_count);
                     let view_count = user.viewer_count;
+                    console.log(view_count);
 
                     function buildOutList() {
                         let li1 = document.createElement('li');
