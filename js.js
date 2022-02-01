@@ -127,34 +127,15 @@ function myOwn(id) {
                 //console.log(user_login_list);
                 //console.log(view_count_list);
 
-                function allTogether(a, b) {
-                    for (let i = 0; i < a.length; i++) {
-
-                        let li = document.createElement('li');
-                        let link = document.createElement('a');
-                        link.setAttribute('href', `https://www.twitch.tv/${b[i]}`);
-                        link.appendChild(li);
-                        li.appendChild(document.createTextNode(`${a[i]}`));
-                        document.querySelector('ul.collection').appendChild(link);
-
-                        console.log('allTogether worked');
-                        //console.log(a[i]);
-                        //console.log(b[i]);
-                        //console.log(c[i]);
+                function createUserDiv(arr) {
+                    for (let i = 0; i < arr.length; i++) {
+                        let div = document.createElement('div');
+                        document.getElementById('twitch_extension').appendChild(div);
                     }
+
                 }
 
-                function buildOutList(c) {
-                    for (let i = 0; i < c.length; i++) {
-                        let vDiv_p = document.createElement('div');
-                        vDiv_p.appendChild(document.createTextNode(`${c[i]}`));
-                        document.querySelector('div.viewers').appendChild(vDiv_p);
-                        console.log('buildOutList worked');
-                    }
-                }
-
-                allTogether(user_name_list, user_login_list);
-                buildOutList(view_count_list);
+                createUserDiv(user_list);
 
 
             } else {
