@@ -113,16 +113,14 @@ function myOwn(id) {
                     link.appendChild(li);
                     li.appendChild(document.createTextNode(`${user.user_name}`));
                     document.querySelector('ul.collection').appendChild(link);
-                });
 
-                function buildOutList() {
-                    user_list.forEach(user => {
+                    function buildOutList() {
                         let li1 = document.createElement('li');
                         li1.appendChild(document.createTextNode(`${user.viewer_count}`));
                         document.querySelector('ul.viewers').appendChild(li1);
-                    })
-                }
-                buildOutList;
+                    }
+                    buildOutList;
+                });
 
 
             } else {
