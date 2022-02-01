@@ -84,6 +84,7 @@ h1, h2, p {
     position: relative;
     background: #ddd;
     overflow: hidden;
+    display: flex;
 }
 
 .search-bar-container {
@@ -139,26 +140,40 @@ h1, h2, p {
     left: 25%;
 }
 
-.collection {
+.twitch_extension {
     position: fixed;
+    display: flex;
+    width: 300px;
+    height: 66%;
+    bottom: 0%;
+    left: 0%;
+    border-style: solid;
+    background-color: transparent;
+
+}
+
+.collection {
+    position: absolute;
     display: block;
     width: 200px;
-    height: 66%;
-    bottom: 0;
+    height: 100%;
     left: 0;
     border-style: solid;
     background-color: transparent;
 }
 
 .viewers {
-    position: fixed;
+    position: absolute;
     display: block;
-    width: 200px;
-    height: 66%;
-    bottom: 0%;
+    width: auto;
+    height: 100%;
     right: 0%;
     border-style: solid;
     background-color: transparent;
+}
+
+.viewers p {
+    padding: 5px;
 }
 
 li {
