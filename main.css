@@ -177,12 +177,12 @@ h1, h2, p {
 }*/
 
 .name {
-    width: fit-content;
+    width: 100px;
 }
 
 .viewers {
     right: 0px;
-    width: fit-content;
+    width: 100px;
 }
 
 #particles-js {
