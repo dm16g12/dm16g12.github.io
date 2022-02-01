@@ -174,10 +174,12 @@ h1, h2, p {
 
 .viewers p {
     padding: 10px 5px 10px 5px;
+    border-bottom: black;
 }
 
 li {
     padding: 5px;
+    border-bottom: black;
 }
 
 #particles-js {
