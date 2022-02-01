@@ -150,6 +150,17 @@ h1, h2, p {
     background-color: transparent;
 }
 
+.viewers {
+    position: fixed;
+    display: block;
+    width: 200px;
+    height: 66%;
+    bottom: 0%;
+    right: 0%;
+    border-style: solid;
+    background-color: transparent;
+}
+
 li {
     padding: 5px;
 }

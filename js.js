@@ -93,7 +93,6 @@ function myOwn(id) {
         .then(async resp => {
 
             if (resp.data.length > 0) {
-                let team = resp.data;
                 let user_list = [];
                 user_list = resp.data;
 
@@ -114,6 +113,7 @@ function myOwn(id) {
                     link.appendChild(li);
                     li.appendChild(document.createTextNode(`${user.user_name} ${user.viewer_count}`));
                     document.querySelector('ul.collection').appendChild(link);
+                    document.querySelector('ul.viewers').appendChild(link);
 
                 });
 
