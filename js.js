@@ -117,9 +117,9 @@ function myOwn(id) {
 
                 function buildOutList() {
                     user_list.forEach(user => {
-                        let li = document.createElement('li');
-                        li.appendChild(document.createTextNode(`${user.viewer_count}`));
-                        document.querySelector('ul.viewers').appendChild(li);
+                        let li1 = document.createElement('li');
+                        li1.appendChild(document.createTextNode(`${user.viewer_count}`));
+                        document.querySelector('ul.viewers').appendChild(li1);
                     })
                 }
                 buildOutList;
