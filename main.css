@@ -165,7 +165,7 @@ h1, h2, p {
 }
 
 .twitch_div {
-    position: absolute;
+    position: relative;
     background: transparent;
     box-sizing: border-box;
     border-style: solid;
