@@ -149,6 +149,7 @@ h1, h2, p {
     left: 0%;
     border-style: solid;
     background-color: transparent;
+    z-index: 70;
 
 }
 
@@ -160,6 +161,7 @@ h1, h2, p {
     left: 0;
     border-style: solid;
     background-color: transparent;
+    
 }
 
 .viewers {
