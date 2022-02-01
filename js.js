@@ -140,6 +140,7 @@ function myOwn(id) {
                         let live = document.createElement('p');
                         live.textContent = c[i];
                         document.querySelector('ul.viewers').appendChild(live);
+                        console.log('p has worked');
                         
                         console.log('allTogether worked');
                         //console.log(a[i]);
