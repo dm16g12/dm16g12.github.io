@@ -160,6 +160,7 @@ h1, h2, p {
     background: transparent;
     box-sizing: border-box;
     border-style: solid;
+    justify-content: space-between;
 }
 
 .pfp {
