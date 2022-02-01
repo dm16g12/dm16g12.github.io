@@ -136,6 +136,7 @@ function myOwn(id) {
                         link.appendChild(li);
                         li.appendChild(document.createTextNode(`${a[i]} ${c[i]}`));
                         document.querySelector('ul.collection').appendChild(link);
+                        console.log('allTogether worked');
 
 
                         //console.log(a[i]);
