@@ -150,11 +150,14 @@ h1, h2, p {
     border-style: solid;
     background-color: transparent;
     z-index: 70;
+    box-sizing: border-box;
 
 }
 
 .twitch_div {
-
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .pfp {
