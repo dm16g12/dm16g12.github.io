@@ -158,7 +158,7 @@ function myOwn(id) {
                     console.log('buildOutList worked');
                 }
 
-                //popUserList();
+                popUserList();
                 //buildOutList();
                 allTogether(user_name_list, user_login_list, view_count_list);
 
