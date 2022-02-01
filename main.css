@@ -179,7 +179,7 @@ h1, h2, p {
 .name {
     position: absolute;
     width: 100px;
-    padding: 5px;
+    padding-top: 30px;
 }
 
 .viewers {
