@@ -129,9 +129,9 @@ function myOwn(id) {
 
                 function allTogether(a, b, c) {
                     for (let i = 0; i < a.length; i++) {
-                        console.log(a);
-                        console.log(b);
-                        console.log(c);
+                        console.log(a[i]);
+                        console.log(b[i]);
+                        console.log(c[i]);
                     }
                 }
 
@@ -146,8 +146,8 @@ function myOwn(id) {
                         document.querySelector('ul.collection').appendChild(link);
 
                         let view_count = user.viewer_count;
-                        console.log(view_count);  
-                        console.log('popUserList worked');                    
+                        //console.log(view_count);  
+                        //console.log('popUserList worked');                    
                     });
                 }
 
