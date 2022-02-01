@@ -151,7 +151,7 @@ h1, h2, p {
     background-color: transparent;
     z-index: 70;
     box-sizing: border-box;
-    overflow: auto;
+    overflow: scroll;
 
 }
 
