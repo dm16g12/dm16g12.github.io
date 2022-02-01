@@ -153,36 +153,27 @@ h1, h2, p {
 
 }
 
-.collection {
-    position: absolute;
-    display: block;
-    width: 200px;
-    height: 100%;
-    left: 0;
-    border-style: solid;
-    background-color: transparent;
+.pfp {
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    margin-right: 5px;
+}
 
+.name {
+    display: inline-block;
+    line-height: 30px;
+    font-size: 15px;
 }
 
 .viewers {
     position: absolute;
-    display: block;
-    width: auto;
-    height: 100%;
-    right: 0%;
-    border-style: solid;
-    background-color: transparent;
-    text-align: right;
-}
-
-.viewers p {
-    padding: 20px 5px 20px 5px;
-    border-bottom: black;
-}
-
-li {
-    padding: 5px;
-    border-bottom: black;
+    top: 0px;
+    right: 5px;
 }
 
 #particles-js {
