@@ -139,6 +139,7 @@ function myOwn(id) {
                         let name = document.createElement('span');
                         div.append(name);
                         name.classList.add('name');
+                        name.textContent = user_name_list[i];
 
                         let viewers = document.createElement('span');
                         div.append(viewers);
