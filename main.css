@@ -161,7 +161,7 @@ h1, h2, p {
     left: 0;
     border-style: solid;
     background-color: transparent;
-    
+
 }
 
 .viewers {
@@ -176,7 +176,7 @@ h1, h2, p {
 }
 
 .viewers p {
-    padding: 10px 5px 10px 5px;
+    padding: 20px 5px 20px 5px;
     border-bottom: black;
 }
 
