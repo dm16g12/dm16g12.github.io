@@ -134,7 +134,7 @@ function myOwn(id) {
                         let link = document.createElement('a');
                         link.setAttribute('href', `https://www.twitch.tv/${b[i]}`);
                         link.appendChild(li);
-                        li.appendChild(document.createTextNode(`${a[i]} ${c[i]}`));
+                        li.appendChild(document.createTextNode(`${a[i]}`));
                         document.querySelector('ul.collection').appendChild(link);
                         
                         console.log('allTogether worked');
