@@ -103,6 +103,8 @@ function getId() {
             td.textContent = resp.data[0][key];
             tr.append(td);
         }
+        console.log(resp.data[0].id);
+        console.log(resp.data[0]);
     })
     .catch(err => {
         console.log(err);
