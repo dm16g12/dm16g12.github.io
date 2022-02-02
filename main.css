@@ -200,6 +200,7 @@ h1, h2, p {
     width: 100px;
     text-align: right;
     right: 0px;
+    float: right;
 }
 
 #particles-js {
