@@ -71,10 +71,45 @@ function processToken(token) {
 
     myOwn(60600844);
 
+    getId();
+
 }
 
 console.log('user id is ' + user_id);
 console.log('access_token is ' + access_token);
+
+function getId() {
+    fetch(
+        'https://api.twitch.tv/helix/users',
+        {
+            "headers": {
+                "Client-ID": client_id,
+                "Authorization": "Bearer " + access_token
+            }
+        }
+    )
+    .then(resp => resp.json())
+    .then(resp => {
+        document.getElementById('user_data').innerHTML = '<p>Your Twitch Profile from Helix:</p>';
+        var table = document.createElement('table');
+        document.getElementById('user_data').append(table);
+        for (var key in resp.data[0]) {
+            var tr = document.createElement('tr');
+            table.append(tr);
+            var td = document.createElement('td');
+            td.textContent = key;
+            tr.append(td);
+            var td = document.createElement('td');
+            td.textContent = resp.data[0][key];
+            tr.append(td);
+        }
+    })
+    .catch(err => {
+        console.log(err);
+        document.getElementById('user_data').textContent = 'Something went wrong';
+    });
+}
+
 
 // function to call twitch api and return data for visitor's list of followed streamers
 function myOwn(id) {
