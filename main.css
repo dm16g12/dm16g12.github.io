@@ -169,7 +169,7 @@ h1, h2, p {
     position: relative;
     background: transparent;
     box-sizing: border-box;
-    margin-bottom: 30px;
+    padding-bottom: 30px;
 }
 
 .twitch_div a {
