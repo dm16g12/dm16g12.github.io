@@ -89,7 +89,7 @@ function getId() {
     )
     .then(resp => resp.json())
     .then(resp => {
-        document.getElementById('user_data').innerHTML = `<p>${resp.data[0].id}</p>`;
+        //document.getElementById('user_data').innerHTML = `<p>${resp.data[0].id}</p>`;
         user_id += resp.data[0].id;        
         console.log(resp.data[0].id);
         console.log(resp.data[0]);
