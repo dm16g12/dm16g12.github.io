@@ -161,6 +161,7 @@ h1, h2, p {
     z-index: 70;
     box-sizing: border-box;
     overflow: scroll;
+    padding: 0px;
 
 }
 
