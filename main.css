@@ -183,6 +183,7 @@ h1, h2, p {
     position: absolute;
     width: 100px;
     text-align: left;
+    float: left;
     
 }
 
@@ -190,6 +191,7 @@ h1, h2, p {
     position: absolute;
     width: 100px;
     text-align: right;
+    float: right;
 }
 
 #particles-js {
