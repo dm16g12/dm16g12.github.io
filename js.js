@@ -93,6 +93,7 @@ function getId() {
         user_id += resp.data[0].id;        
         console.log(resp.data[0].id);
         console.log(resp.data[0]);
+        console.log(user_id);
     })
     .catch(err => {
         console.log(err);
