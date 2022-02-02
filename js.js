@@ -90,7 +90,7 @@ function getId() {
     )
     .then(resp => resp.json())
     .then(resp => {
-        document.getElementById('user_data').innerHTML = '<p>Your Twitch Profile from Helix:</p>';
+        document.getElementById('user_data').innerHTML = `<p>${resp.data[0].id}</p>`;
         var table = document.createElement('table');
         document.getElementById('user_data').append(table);
         for (var key in resp.data[0]) {
