@@ -145,7 +145,7 @@ function myOwn(id) {
 
                         let span = document.createElement('span');
                         link.append(span);
-                        span.classList.add(twitch_span);
+                        span.classList.add('twitch_span');
 
                         let name = document.createElement('p');
                         div.append(name);
