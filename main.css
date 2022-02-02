@@ -173,6 +173,10 @@ h1, h2, p {
     margin-bottom: 20px;
 }
 
+.twitch_div:hover {
+    background-blend-mode: darken;
+}
+
 /*.pfp {
     width: auto;
 }*/
