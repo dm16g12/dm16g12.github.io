@@ -139,16 +139,20 @@ function myOwn(id) {
                         //div.append(pfp);
                         //pfp.classList.add('pfp');
 
-                        let name = document.createElement('span');
-                        div.append(name);
-                        name.classList.add('name');
-                        name.textContent = user_name_list[i];
-
                         let link = document.createElement('a');
                         div.append(link);
                         link.setAttribute('href', `https://www.twitch.tv/${user_login_list[i]}`)
 
-                        let viewers = document.createElement('span');
+                        let span = document.createElement('span');
+                        link.append(span);
+                        span.classList.add(twitch_span);
+
+                        let name = document.createElement('p');
+                        div.append(name);
+                        name.classList.add('name');
+                        name.textContent = user_name_list[i];
+
+                        let viewers = document.createElement('p');
                         div.append(viewers);
                         viewers.classList.add('viewers');
                         viewers.textContent = view_count_list[i];

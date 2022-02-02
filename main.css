@@ -170,12 +170,27 @@ h1, h2, p {
     background: transparent;
     box-sizing: border-box;
     padding-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .twitch_div a {
+    position: absolute;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
+}
+
+.twitch_span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: transparent;
+    border-style: solid;
 }
 
 .twitch_div:hover {
@@ -188,19 +203,13 @@ h1, h2, p {
 }*/
 
 .name {
-    
-    width: 100px;
-    text-align: left;
-    left: 0px;
-    
+ 
 }
 
 .viewers {
     
     width: 100px;
     text-align: right;
-    right: 0px;
-    float: right;
 }
 
 #particles-js {
