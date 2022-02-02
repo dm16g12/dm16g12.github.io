@@ -144,6 +144,10 @@ function myOwn(id) {
                         name.classList.add('name');
                         name.textContent = user_name_list[i];
 
+                        let link = document.createElement('a');
+                        name.append(link);
+                        link.setAttribute('href', `https://www.twitch.tv/${user_login_list[i]}`)
+
                         let viewers = document.createElement('span');
                         div.append(viewers);
                         viewers.classList.add('viewers');
