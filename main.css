@@ -169,14 +169,14 @@ h1, h2, p {
     position: relative;
     background: transparent;
     box-sizing: border-box;
-    border-style: solid;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .twitch_div a {
     position: absolute;
     width: 100%;
     height: 100%;
+    box-sizing: border-box;
 }
 
 .twitch_div:hover {
