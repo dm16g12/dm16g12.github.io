@@ -179,7 +179,8 @@ h1, h2, p {
 }
 
 .twitch_div:hover {
-    background-blend-mode: darken;
+    background-color: aliceblue;
+    cursor: pointer;
 }
 
 /*.pfp {
@@ -187,7 +188,7 @@ h1, h2, p {
 }*/
 
 .name {
-    position: absolute;
+    
     width: 100px;
     text-align: left;
     left: 0px;
@@ -195,7 +196,7 @@ h1, h2, p {
 }
 
 .viewers {
-    position: absolute;
+    
     width: 100px;
     text-align: right;
     right: 0px;
