@@ -69,10 +69,9 @@ function processToken(token) {
 
     status.textContent = 'Got Token. Loading Things';
 
-    myOwn(60600844);
-
     getId();
 
+    myOwn(60600844);
 }
 
 console.log('user id is ' + user_id);
@@ -91,18 +90,7 @@ function getId() {
     .then(resp => resp.json())
     .then(resp => {
         document.getElementById('user_data').innerHTML = `<p>${resp.data[0].id}</p>`;
-        var table = document.createElement('table');
-        document.getElementById('user_data').append(table);
-        for (var key in resp.data[0]) {
-            var tr = document.createElement('tr');
-            table.append(tr);
-            var td = document.createElement('td');
-            td.textContent = key;
-            tr.append(td);
-            var td = document.createElement('td');
-            td.textContent = resp.data[0][key];
-            tr.append(td);
-        }
+        user_id += resp.data[0].id;        
         console.log(resp.data[0].id);
         console.log(resp.data[0]);
     })
