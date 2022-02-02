@@ -181,12 +181,14 @@ h1, h2, p {
 .name {
     position: absolute;
     width: 100px;
+    text-align: left;
     
 }
 
 .viewers {
     position: absolute;
     width: 100px;
+    text-align: right;
 }
 
 #particles-js {
