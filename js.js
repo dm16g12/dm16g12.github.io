@@ -71,7 +71,7 @@ function processToken(token) {
 
     getId();
 
-    myOwn(60600844);
+    myOwn(user_id);
 }
 
 console.log('user id is ' + user_id);
