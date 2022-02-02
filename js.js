@@ -145,7 +145,7 @@ function myOwn(id) {
                         name.textContent = user_name_list[i];
 
                         let link = document.createElement('a');
-                        name.append(link);
+                        div.append(link);
                         link.setAttribute('href', `https://www.twitch.tv/${user_login_list[i]}`)
 
                         let viewers = document.createElement('span');
