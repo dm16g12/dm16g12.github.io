@@ -57,6 +57,8 @@ var redirect = 'https://dm16g12.github.io';
 var access_token = '';
 var user_id = [];
 
+var the_id = '';
+
 
 // create div to show status of authorisation/retrieval process
 const status = document.getElementById('status');
@@ -71,7 +73,6 @@ function processToken(token) {
 
     getId();
 
-    var the_id = '';
     console.log(the_id);
 
     myOwn(user_id);
