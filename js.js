@@ -86,7 +86,7 @@ function processToken(token) {
 function myOwn(id) {
 
     let code = getId();
-     
+
     let url = new URL('https://api.twitch.tv/helix/streams/followed?user_id=' + code);
     //console.log(url);
     //console.log(user_id);
@@ -132,7 +132,7 @@ function myOwn(id) {
                         user_name_list.push(user.user_name);
                         user_login_list.push(user.user_login);
                         view_count_list.push(user.viewer_count);
-                        
+
                     });
                 }
 
@@ -198,34 +198,42 @@ function getId() {
             }
         }
     )
-    .then(resp => resp.json())
-    .then(resp => {
-        //document.getElementById('user_data').innerHTML = `<p>${resp.data[0].id}</p>`;
-        let code = resp.data[0].id;
-        console.log(code);
+        .then(resp => resp.json())
+        .then(resp => {
+            //document.getElementById('user_data').innerHTML = `<p>${resp.data[0].id}</p>`;
+            let code = resp.data[0].id;
+            console.log(code);
 
-        return resp.data[0].id;
+            return resp.data[0].id;
 
-        
-        
 
-        
-              
-        //console.log(resp.data[0].id);
-        //console.log(resp.data[0]);
-        //console.log(user_id);
-    })
-    .catch(err => {
-        console.log(err);
-        document.getElementById('user_data').textContent = 'Something went wrong';
-    });
+
+
+
+
+            //console.log(resp.data[0].id);
+            //console.log(resp.data[0]);
+            //console.log(user_id);
+        })
+        .catch(err => {
+            console.log(err);
+            document.getElementById('user_data').textContent = 'Something went wrong';
+        });
 }
 
 let jsondata = '';
 let apiURL = 'https://api.twitch.tv/helix/streams/followed?user_id=60600844';
 
 async function getJson(url) {
-    let response = await fetch(url);
+    let response = await fetch(
+        url,
+        {
+            "headers": {
+                "Client-ID": client_id,
+                "Authorization": "Bearer " + access_token
+            }
+        }
+    );
     let data = await response.json();
     return data;
 }
