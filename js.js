@@ -242,7 +242,6 @@ async function getJson(url) {
 
 async function main() {
     jsondata = await getJson(apiURL);
-    let myId = jsondata[0].id;
     console.log("jsondata within main() function is " + jsondata);
 }
 
