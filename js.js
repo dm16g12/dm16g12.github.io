@@ -84,7 +84,7 @@ function processToken(token) {
 
 // function to call twitch api and return data for visitor's list of followed streamers
 function myOwn(id) {
-    let url = new URL('https://api.twitch.tv/helix/streams/followed?user_id=' + id);
+    let url = new URL('https://api.twitch.tv/helix/streams/followed?user_id=768824872');
     //console.log(url);
     //console.log(user_id);
     //console.log('the id in myOwn is ' + the_id) + " on line 124";
