@@ -59,9 +59,9 @@ var user_id = [];
 
 var the_id = '';
 
-console.log('console logging the_id everywhere line 62');
+//console.log('console logging the_id everywhere line 62');
 
-console.log('the_id in main is ' + the_id + " in line 62");
+//console.log('the_id in main is ' + the_id + " in line 62");
 
 
 // create div to show status of authorisation/retrieval process
@@ -221,7 +221,24 @@ function getId() {
     });
 }
 
-console.log('will swap this around');
+let jsondata = '';
+let apiURL = 'https://api.twitch.tv/helix/streams/followed?user_id=60600844';
+
+async function getJson(url) {
+    let response = await fetch(url);
+    let data = await response.json();
+    return data;
+}
+
+async function main() {
+    jsondata = await getJson(apiURL);
+    console.log(jsondata);
+}
+
+main();
+console.log(jsondata);
+
+console.log('trying new fix');
 //console.log('user id is ' + user_id);
 //console.log('access_token is ' + access_token);
 
