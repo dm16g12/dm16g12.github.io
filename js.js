@@ -93,8 +93,8 @@ function myOwn(id) {
     //console.log(url);
     //console.log(user_id);
     //console.log('the id in myOwn is ' + the_id) + " on line 124";
-    console.log(`code is ${code}`);
-    console.log('same as 768824872');
+    //console.log(`code is ${code}`);
+    //console.log('same as 768824872');
 
     fetch(
         url,
