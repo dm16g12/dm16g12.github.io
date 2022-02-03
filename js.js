@@ -238,7 +238,7 @@ async function getJson(url) {
     );
     let data = await response.json();
     console.log(response);
-    console.log('data is ' + data);
+    console.log('before this is response and after is id');
     console.log(data.id);
     console.log(data);
     console.log(JSON.stringify(data));
@@ -248,16 +248,17 @@ async function getJson(url) {
 
 async function main() {
     jsondata = await getJson(apiURL);
-    console.log("jsondata within main() function is " + jsondata[0]);
+    console.log(jsondata[0]);
+    console.log(jsondata);
     for (let i = 0; i < 5; i++) {
-        console.log(jsondata[i]);
+        console.log(jsondata[0][i]);
     }
     
 }
 
-console.log('jsondata is ' + jsondata);
+console.log(jsondata);
 
-console.log('console.logging data and response');
+console.log('changing the console logs');
 //console.log('user id is ' + user_id);
 //console.log('access_token is ' + access_token);
 
