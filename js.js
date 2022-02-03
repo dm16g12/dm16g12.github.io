@@ -237,6 +237,7 @@ async function getJson(url) {
         }
     );
     let data = await response.json();
+    console.log('data is ' + data);
     return data;
 }
 
@@ -246,11 +247,15 @@ async function main() {
     for (let i = 0; i < 5; i++) {
         console.log(jsondata[i]);
     }
+    let { container } = jsondata;
+    for (let i = 0; i < 5; i++) {
+        console.log(container[i]);
+    } 
 }
 
 console.log('jsondata is ' + jsondata);
 
-console.log('try now');
+console.log('adding container');
 //console.log('user id is ' + user_id);
 //console.log('access_token is ' + access_token);
 
