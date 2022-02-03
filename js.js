@@ -59,9 +59,9 @@ var user_id = [];
 
 var the_id = '';
 
-console.log('console logging the_id everywhere');
+console.log('console logging the_id everywhere line 62');
 
-console.log('the_id in main ' + the_id);
+console.log('the_id in main is ' + the_id + " in line 62");
 
 
 // create div to show status of authorisation/retrieval process
@@ -77,7 +77,7 @@ function processToken(token) {
 
     getId();
 
-    console.log('the id ' + the_id);
+    console.log('the id is ' + the_id + ' on line 80');
 
     myOwn(user_id);
 }
@@ -121,7 +121,7 @@ function myOwn(id) {
     let url = new URL('https://api.twitch.tv/helix/streams/followed?user_id=60600844');
     //console.log(url);
     //console.log(user_id);
-    console.log('the id ' + the_id);
+    console.log('the id in myOwn is ' + the_id) + " on line 124";
 
 
     fetch(
@@ -217,6 +217,8 @@ function myOwn(id) {
 
 
 }
+
+console.log('console logging ' + code + " on main line 221");
 
 //console.log('user id is ' + user_id);
 //console.log('access_token is ' + access_token);
