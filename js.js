@@ -71,11 +71,14 @@ function processToken(token) {
 
     getId();
 
+    var the_id = '';
+    console.log(the_id);
+
     myOwn(user_id);
 }
 
-console.log('user id is ' + user_id);
-console.log('access_token is ' + access_token);
+//console.log('user id is ' + user_id);
+//console.log('access_token is ' + access_token);
 
 function getId() {
     fetch(
@@ -93,6 +96,8 @@ function getId() {
         let code = resp.data[0].id;
         console.log(code);
         user_id.push(code);
+
+        the_id += code;
 
         user_id.push(resp.data[0].id);        
         //console.log(resp.data[0].id);
@@ -207,6 +212,6 @@ function myOwn(id) {
 
 }
 
-console.log('user id is ' + user_id);
-console.log('access_token is ' + access_token);
+//console.log('user id is ' + user_id);
+//console.log('access_token is ' + access_token);
 
