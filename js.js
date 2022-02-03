@@ -215,7 +215,7 @@ function getId() {
     });
 }
 
-
+console.log('this worked today');
 //console.log('user id is ' + user_id);
 //console.log('access_token is ' + access_token);
 
