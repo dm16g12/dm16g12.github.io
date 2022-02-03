@@ -59,7 +59,7 @@ var user_id = [];
 
 var the_id = '';
 
-console.log('this has worked');
+console.log('return the_id = code');
 
 
 // create div to show status of authorisation/retrieval process
@@ -100,8 +100,8 @@ function getId() {
         console.log(code);
         user_id.push(code);
 
-        the_id = code;
-        return the_id;       
+        
+        return the_id = code;       
         //console.log(resp.data[0].id);
         //console.log(resp.data[0]);
         //console.log(user_id);
