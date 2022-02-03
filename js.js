@@ -55,7 +55,7 @@ var client_id = 'jm9omolnvrbdhe7i9k774xys65k5ec';
 var redirect = 'https://dm16g12.github.io';
 // setup a memory space for the token/userID
 var access_token = '';
-var user_id = '';
+var user_id = [];
 
 
 // create div to show status of authorisation/retrieval process
@@ -90,7 +90,7 @@ function getId() {
     .then(resp => resp.json())
     .then(resp => {
         //document.getElementById('user_data').innerHTML = `<p>${resp.data[0].id}</p>`;
-        user_id += resp.data[0].id;        
+        user_id.push(resp.data[0].id);        
         //console.log(resp.data[0].id);
         //console.log(resp.data[0]);
         //console.log(user_id);
