@@ -247,7 +247,7 @@ async function main() {
 
 console.log('jsondata is ' + jsondata);
 
-console.log('changing main url');
+console.log('changing main url next update');
 //console.log('user id is ' + user_id);
 //console.log('access_token is ' + access_token);
 
