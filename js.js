@@ -77,51 +77,17 @@ function processToken(token) {
 
     getId();
 
-    console.log('the id is ' + the_id + ' on line 80');
-
-    myOwn(user_id);
 }
 
 //console.log('user id is ' + user_id);
 //console.log('access_token is ' + access_token);
 
-function getId() {
-    fetch(
-        'https://api.twitch.tv/helix/users',
-        {
-            "headers": {
-                "Client-ID": client_id,
-                "Authorization": "Bearer " + access_token
-            }
-        }
-    )
-    .then(resp => resp.json())
-    .then(resp => {
-        //document.getElementById('user_data').innerHTML = `<p>${resp.data[0].id}</p>`;
-        let code = resp.data[0].id;
-        console.log(code);
-        user_id.push(code);
-        console.log('the_id in getID = ' + the_id);
-
-        
-        return the_id = code;       
-        //console.log(resp.data[0].id);
-        //console.log(resp.data[0]);
-        //console.log(user_id);
-    })
-    .catch(err => {
-        console.log(err);
-        document.getElementById('user_data').textContent = 'Something went wrong';
-    });
-}
-
-
 // function to call twitch api and return data for visitor's list of followed streamers
 function myOwn(id) {
-    let url = new URL('https://api.twitch.tv/helix/streams/followed?user_id=60600844');
+    let url = new URL('https://api.twitch.tv/helix/streams/followed?user_id=' + id);
     //console.log(url);
     //console.log(user_id);
-    console.log('the id in myOwn is ' + the_id) + " on line 124";
+    //console.log('the id in myOwn is ' + the_id) + " on line 124";
 
 
     fetch(
@@ -218,7 +184,37 @@ function myOwn(id) {
 
 }
 
-console.log('console logging ' + code + " on main line 221");
+function getId() {
+    fetch(
+        'https://api.twitch.tv/helix/users',
+        {
+            "headers": {
+                "Client-ID": client_id,
+                "Authorization": "Bearer " + access_token
+            }
+        }
+    )
+    .then(resp => resp.json())
+    .then(resp => {
+        //document.getElementById('user_data').innerHTML = `<p>${resp.data[0].id}</p>`;
+        let code = resp.data[0].id;
+        console.log(code);
+
+        myOwn(code);
+        
+
+        
+              
+        //console.log(resp.data[0].id);
+        //console.log(resp.data[0]);
+        //console.log(user_id);
+    })
+    .catch(err => {
+        console.log(err);
+        document.getElementById('user_data').textContent = 'Something went wrong';
+    });
+}
+
 
 //console.log('user id is ' + user_id);
 //console.log('access_token is ' + access_token);
