@@ -223,7 +223,7 @@ function getId() {
         });
 }
 
-let jsondata = {};
+let jsondata = [];
 let apiURL = 'https://api.twitch.tv/helix/users';
 
 async function getJson(url) {
@@ -238,6 +238,8 @@ async function getJson(url) {
     );
     let data = await response.json();
     console.log('data is ' + data);
+    console.log(JSON.stringify(data));
+
     return data;
 }
 
@@ -247,15 +249,12 @@ async function main() {
     for (let i = 0; i < 5; i++) {
         console.log(jsondata[i]);
     }
-    let { container } = jsondata;
-    for (let i = 0; i < 5; i++) {
-        console.log(container[i]);
-    } 
+    
 }
 
 console.log('jsondata is ' + jsondata);
 
-console.log('changing jsondata to empty object');
+console.log('stringify data');
 //console.log('user id is ' + user_id);
 //console.log('access_token is ' + access_token);
 
