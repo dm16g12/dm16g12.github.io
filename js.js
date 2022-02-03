@@ -59,7 +59,9 @@ var user_id = [];
 
 var the_id = '';
 
-console.log('return the_id = code');
+console.log('console logging the_id everywhere');
+
+console.log('the_id in main ' + the_id);
 
 
 // create div to show status of authorisation/retrieval process
@@ -99,6 +101,7 @@ function getId() {
         let code = resp.data[0].id;
         console.log(code);
         user_id.push(code);
+        console.log('the_id in getID = ' + the_id);
 
         
         return the_id = code;       
