@@ -59,6 +59,8 @@ var user_id = [];
 
 var the_id = '';
 
+console.log('this has worked');
+
 
 // create div to show status of authorisation/retrieval process
 const status = document.getElementById('status');
