@@ -238,6 +238,8 @@ async function getJson(url) {
     );
     let data = await response.json();
     console.log('data is ' + data);
+    console.log(data.id);
+    console.log(data);
     console.log(JSON.stringify(data));
 
     return data;
@@ -254,7 +256,7 @@ async function main() {
 
 console.log('jsondata is ' + jsondata);
 
-console.log('stringify data');
+console.log('console.logging data');
 //console.log('user id is ' + user_id);
 //console.log('access_token is ' + access_token);
 
