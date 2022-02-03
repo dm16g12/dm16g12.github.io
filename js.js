@@ -77,6 +77,8 @@ function processToken(token) {
 
     myOwn();
 
+    main();
+
 }
 
 //console.log('user id is ' + user_id);
@@ -243,8 +245,7 @@ async function main() {
     console.log(jsondata);
 }
 
-main();
-console.log(jsondata);
+console.log('jsondata is ' + jsondata);
 
 console.log('trying new fix');
 //console.log('user id is ' + user_id);
