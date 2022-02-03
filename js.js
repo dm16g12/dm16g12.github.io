@@ -75,7 +75,7 @@ function processToken(token) {
 
     status.textContent = 'Got Token. Loading Things';
 
-    getId();
+    myOwn();
 
 }
 
@@ -84,11 +84,15 @@ function processToken(token) {
 
 // function to call twitch api and return data for visitor's list of followed streamers
 function myOwn(id) {
-    let url = new URL('https://api.twitch.tv/helix/streams/followed?user_id=768824872');
+
+    let code = getId();
+     
+    let url = new URL('https://api.twitch.tv/helix/streams/followed?user_id=' + code);
     //console.log(url);
     //console.log(user_id);
     //console.log('the id in myOwn is ' + the_id) + " on line 124";
-
+    console.log(`code is ${code}`);
+    console.log('same as 768824872');
 
     fetch(
         url,
@@ -200,7 +204,9 @@ function getId() {
         let code = resp.data[0].id;
         console.log(code);
 
-        myOwn(code);
+        return resp.data[0].id;
+
+        
         
 
         
@@ -215,7 +221,7 @@ function getId() {
     });
 }
 
-console.log('this worked today');
+console.log('will swap this around');
 //console.log('user id is ' + user_id);
 //console.log('access_token is ' + access_token);
 
