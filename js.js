@@ -248,6 +248,7 @@ async function getJson(url) {
 
 async function main() {
     jsondata = await getJson(apiURL);
+    console.log('jsondata[0] is below this');
     console.log(jsondata[0]);
     console.log(jsondata);
     for (let i = 0; i < 5; i++) {
