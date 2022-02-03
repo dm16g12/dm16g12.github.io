@@ -248,7 +248,7 @@ async function main() {
 
 console.log('jsondata is ' + jsondata);
 
-console.log('trying new fix');
+console.log('changing main url');
 //console.log('user id is ' + user_id);
 //console.log('access_token is ' + access_token);
 
