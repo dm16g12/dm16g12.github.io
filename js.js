@@ -243,11 +243,14 @@ async function getJson(url) {
 async function main() {
     jsondata = await getJson(apiURL);
     console.log("jsondata within main() function is " + jsondata);
+    for (let i = 0; i < jsondata.length; i++) {
+        console.log(jsondata[i]);
+    }
 }
 
 console.log('jsondata is ' + jsondata);
 
-console.log('changing main url next update');
+console.log('iterating through jsondata');
 //console.log('user id is ' + user_id);
 //console.log('access_token is ' + access_token);
 
