@@ -224,7 +224,7 @@ function getId() {
 }
 
 let jsondata = '';
-let apiURL = 'https://api.twitch.tv/helix/streams/followed?user_id=60600844';
+let apiURL = 'https://api.twitch.tv/helix/users';
 
 async function getJson(url) {
     let response = await fetch(
@@ -242,7 +242,8 @@ async function getJson(url) {
 
 async function main() {
     jsondata = await getJson(apiURL);
-    console.log(jsondata);
+    let myId = jsondata[0].id;
+    console.log("jsondata within main() function is " + jsondata);
 }
 
 console.log('jsondata is ' + jsondata);
