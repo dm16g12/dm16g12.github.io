@@ -89,7 +89,7 @@ function processToken(token) {
 //console.log('access_token is ' + access_token);
 
 // function to call twitch api and return data for visitor's list of followed streamers
-function myOwn(id) {
+async function myOwn(id) {
 
     let code = await getJson(apiURL);
     console.log(code);
