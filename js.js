@@ -79,6 +79,9 @@ function processToken(token) {
 
     main();
 
+    console.log('jsondata.data[0] below');
+    console.log(jsondata.data[0].id);
+
 }
 
 //console.log('user id is ' + user_id);
