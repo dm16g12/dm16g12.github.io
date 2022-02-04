@@ -55,13 +55,7 @@ var client_id = 'jm9omolnvrbdhe7i9k774xys65k5ec';
 var redirect = 'https://dm16g12.github.io';
 // setup a memory space for the token/userID
 var access_token = '';
-var user_id = [];
 
-var the_id = '';
-
-//console.log('console logging the_id everywhere line 62');
-
-//console.log('the_id in main is ' + the_id + " in line 62");
 
 
 // create div to show status of authorisation/retrieval process
@@ -77,31 +71,15 @@ function processToken(token) {
 
     myOwn();
 
-    //main();
-
-    console.log('jsondata.data[0] below');
-    console.log(jsondata.data[0].id);
-    console.log(jsondata);
-
 }
-
-//console.log('user id is ' + user_id);
-//console.log('access_token is ' + access_token);
 
 // function to call twitch api and return data for visitor's list of followed streamers
 async function myOwn(id) {
 
     let code = await getJson(apiURL);
-    console.log(code.data[0].id);
-    console.log('code in myOwn');
     let code1 = code.data[0].id;
 
     let url = new URL('https://api.twitch.tv/helix/streams/followed?user_id=' + code1);
-    //console.log(url);
-    //console.log(user_id);
-    //console.log('the id in myOwn is ' + the_id) + " on line 124";
-    //console.log(`code is ${code}`);
-    //console.log('same as 768824872');
 
     fetch(
         url,
@@ -119,14 +97,6 @@ async function myOwn(id) {
                 let user_list = [];
                 user_list = resp.data;
 
-
-                //let resp_length = resp.data.length;
-                //document.getElementById('response').textContent = resp_length;
-
-                //console.log(resp.data);
-                //console.log(resp.data[0]);
-                //console.log(resp.data[0].user_name);
-                //console.log(user_list);
 
                 const user_name_list = [];
                 const user_login_list = [];
@@ -146,10 +116,6 @@ async function myOwn(id) {
                 }
 
                 cycle(user_list);
-
-                //console.log(user_name_list);
-                //console.log(user_login_list);
-                //console.log(view_count_list);
 
                 function createUserDiv() {
                     for (let i = 0; i < user_name_list.length; i++) {
@@ -197,40 +163,6 @@ async function myOwn(id) {
 
 }
 
-function getId() {
-    fetch(
-        'https://api.twitch.tv/helix/users',
-        {
-            "headers": {
-                "Client-ID": client_id,
-                "Authorization": "Bearer " + access_token
-            }
-        }
-    )
-        .then(resp => resp.json())
-        .then(resp => {
-            //document.getElementById('user_data').innerHTML = `<p>${resp.data[0].id}</p>`;
-            //let code = resp.data[0].id;
-            //console.log(code);
-            //console.log('code in getId above');
-
-            return resp.data[0].id;
-
-
-
-
-
-
-            //console.log(resp.data[0].id);
-            //console.log(resp.data[0]);
-            //console.log(user_id);
-        })
-        .catch(err => {
-            console.log(err);
-            document.getElementById('user_data').textContent = 'Something went wrong';
-        });
-}
-
 let jsondata = '';
 let apiURL = 'https://api.twitch.tv/helix/users';
 
@@ -245,26 +177,17 @@ async function getJson(url) {
         }
     );
     let data = await response.json();
-    //console.log(response);
-    //console.log('before this is response and after is data.data[0.id and data.data[0');
-    //console.log(data.data[0].id);
-    //console.log(data.data[0]);
-    //console.log(JSON.stringify(data));
 
     return data;
 }
 
 async function main() {
     jsondata = await getJson(apiURL);
-    //console.log(data);
-    //console.log('showing data in main above');
     console.log(jsondata.data[0].id);
     console.log('jsondata.data[0].id above');
     
     
 }
 
-console.log('adding it all together');
-//console.log('user id is ' + user_id);
-//console.log('access_token is ' + access_token);
+console.log('first working edn');
 
