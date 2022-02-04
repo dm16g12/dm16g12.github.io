@@ -227,7 +227,7 @@ function getId() {
         });
 }
 
-let jsondata = [];
+let jsondata = '';
 let apiURL = 'https://api.twitch.tv/helix/users';
 
 async function getJson(url) {
