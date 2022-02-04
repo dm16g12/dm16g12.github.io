@@ -181,13 +181,5 @@ async function getJson(url) {
     return data;
 }
 
-async function main() {
-    jsondata = await getJson(apiURL);
-    console.log(jsondata.data[0].id);
-    console.log('jsondata.data[0].id above');
-    
-    
-}
-
 console.log('first working edn');
 
