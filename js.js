@@ -94,8 +94,9 @@ async function myOwn(id) {
     let code = await getJson(apiURL);
     console.log(code.data[0].id);
     console.log('code in myOwn');
+    let code1 = code.data[0].id;
 
-    let url = new URL('https://api.twitch.tv/helix/streams/followed?user_id=' + code);
+    let url = new URL('https://api.twitch.tv/helix/streams/followed?user_id=' + code1);
     //console.log(url);
     //console.log(user_id);
     //console.log('the id in myOwn is ' + the_id) + " on line 124";
