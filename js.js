@@ -252,19 +252,16 @@ async function getJson(url) {
 
 async function main() {
     jsondata = await getJson(apiURL);
-    console.log('jsondata.data[0].id is below this');
+    console.log(data);
     console.log(jsondata.data[0].id);
-    console.log('jsondata.data[0] above and json data below');
-    console.log(jsondata);
-    for (let i = 0; i < 5; i++) {
-        console.log(jsondata.data[0][i]);
-    }
+    console.log('jsondata.data[0].id above');
+    
     
 }
 
 console.log(jsondata);
 
-console.log('changing once again');
+console.log('showing data in main');
 //console.log('user id is ' + user_id);
 //console.log('access_token is ' + access_token);
 
