@@ -77,7 +77,7 @@ function processToken(token) {
 
     myOwn();
 
-    main();
+    //main();
 
     console.log('jsondata.data[0] below');
     console.log(jsondata.data[0].id);
