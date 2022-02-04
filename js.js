@@ -209,6 +209,7 @@ function getId() {
             //document.getElementById('user_data').innerHTML = `<p>${resp.data[0].id}</p>`;
             let code = resp.data[0].id;
             console.log(code);
+            console.log('code in getId above');
 
             return resp.data[0].id;
 
