@@ -92,7 +92,7 @@ function processToken(token) {
 async function myOwn(id) {
 
     let code = await getJson(apiURL);
-    console.log(code);
+    console.log(code.data[0].id);
     console.log('code in myOwn');
 
     let url = new URL('https://api.twitch.tv/helix/streams/followed?user_id=' + code);
