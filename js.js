@@ -257,7 +257,7 @@ async function main() {
     console.log('jsondata.data[0] above and json data below');
     console.log(jsondata);
     for (let i = 0; i < 5; i++) {
-        console.log(jsondata.data.data[i]);
+        console.log(jsondata.data[0][i]);
     }
     
 }
