@@ -253,6 +253,7 @@ async function getJson(url) {
 async function main() {
     jsondata = await getJson(apiURL);
     console.log(data);
+    console.log('showing data in main above');
     console.log(jsondata.data[0].id);
     console.log('jsondata.data[0].id above');
     
