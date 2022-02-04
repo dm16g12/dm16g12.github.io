@@ -91,7 +91,9 @@ function processToken(token) {
 // function to call twitch api and return data for visitor's list of followed streamers
 function myOwn(id) {
 
-    let code = getId();
+    let code = await getJson(apiURL);
+    console.log(code);
+    console.log('code in myOwn');
 
     let url = new URL('https://api.twitch.tv/helix/streams/followed?user_id=' + code);
     //console.log(url);
@@ -207,9 +209,9 @@ function getId() {
         .then(resp => resp.json())
         .then(resp => {
             //document.getElementById('user_data').innerHTML = `<p>${resp.data[0].id}</p>`;
-            let code = resp.data[0].id;
-            console.log(code);
-            console.log('code in getId above');
+            //let code = resp.data[0].id;
+            //console.log(code);
+            //console.log('code in getId above');
 
             return resp.data[0].id;
 
@@ -242,19 +244,19 @@ async function getJson(url) {
         }
     );
     let data = await response.json();
-    console.log(response);
-    console.log('before this is response and after is data.data[0.id and data.data[0');
-    console.log(data.data[0].id);
-    console.log(data.data[0]);
-    console.log(JSON.stringify(data));
+    //console.log(response);
+    //console.log('before this is response and after is data.data[0.id and data.data[0');
+    //console.log(data.data[0].id);
+    //console.log(data.data[0]);
+    //console.log(JSON.stringify(data));
 
     return data;
 }
 
 async function main() {
     jsondata = await getJson(apiURL);
-    console.log(data);
-    console.log('showing data in main above');
+    //console.log(data);
+    //console.log('showing data in main above');
     console.log(jsondata.data[0].id);
     console.log('jsondata.data[0].id above');
     
