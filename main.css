@@ -140,27 +140,29 @@ h1, h2, p {
     left: 25%;
 }
 
-.neumorphic_layer {
-    position: absolute;
-    height: 70%;
+.card {
+    position: fixed;
+    height: 75%;
     width: 350px;
     bottom: 30px;
     left: 10px;
-    border-radius: 22px;
-    background: #d0d0d0;
-    box-shadow:  41px 41px 82px #b1b1b1,
-                 -41px -41px 82px #efefef;
-    z-index: 0;
-     
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    z-index:5;  
 }
+
 
 .twitch_wrap {
     position: fixed;
     width: 300px;
     height: 66%;
-    bottom: 30px;
-    left: 10px;
-    background: transparent;
+    bottom: 80px;
+    left: 35px;
+    background: transparent;  
+    z-index: 20; 
 }
 
 .twitch_extension {
@@ -171,21 +173,23 @@ h1, h2, p {
     bottom: 0%;
     left: 0%;
     background-color: transparent;
-    z-index: 70;
     box-sizing: border-box;
     overflow-y: scroll;
     padding: 0px;
-
 }
 
 .twitch_div {
     position: relative;
     background: transparent;
     box-sizing: border-box;
-    padding-bottom: 30px;
+    border-radius: 7px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-end;   
 }
 
 .twitch_div a {
@@ -206,8 +210,19 @@ h1, h2, p {
     border-style: solid;
 }
 
+.twitch_span::after {
+    content: '';
+    position: absolute;
+    background-color: #eee;
+    height: 1px;
+    width: 96%;
+    z-index: 60;
+    bottom: -10px;
+    left: 2%;
+}
+
 .twitch_div:hover {
-    background-color: aliceblue;
+    background-color: hsla(0, 0%, 0%, 0.1);
     cursor: pointer;
 }
 
@@ -216,13 +231,18 @@ h1, h2, p {
 }*/
 
 .name {
- 
+    font-family: 'Teko', sans-serif;
+    font-size: 25px;
+    font-weight: 300;
 }
 
 .viewers {
     
     width: 100px;
     text-align: right;
+    font-family: 'Teko', sans-serif;
+    font-size: 25px;
+    font-weight: 300; 
 }
 
 #particles-js {
