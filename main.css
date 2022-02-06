@@ -170,7 +170,6 @@ h1, h2, p {
     height: 100%;
     bottom: 0%;
     left: 0%;
-    border-style: solid;
     background-color: transparent;
     z-index: 70;
     box-sizing: border-box;
