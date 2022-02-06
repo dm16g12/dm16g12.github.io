@@ -231,7 +231,7 @@ h1, h2, p {
 
 .name {
     font-family: 'Inter', sans-serif;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 300;
 }
 
@@ -240,7 +240,7 @@ h1, h2, p {
     width: 100px;
     text-align: right;
     font-family: 'Inter', sans-serif;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 300; 
 }
 
