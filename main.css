@@ -140,6 +140,20 @@ h1, h2, p {
     left: 25%;
 }
 
+.neumorphic_layer {
+    position: absolute;
+    height: 70%;
+    width: 350px;
+    bottom: 30px;
+    left: 10px;
+    border-radius: 22px;
+    background: #d0d0d0;
+    box-shadow:  41px 41px 82px #b1b1b1,
+                 -41px -41px 82px #efefef;
+    z-index: 0;
+     
+}
+
 .twitch_wrap {
     position: fixed;
     width: 300px;
