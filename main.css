@@ -253,9 +253,8 @@ h1, h2, p {
     width: fit-content;
     text-align: right;
     font-family: 'Teko', sans-serif;
-    font-size: 25px;
-    font-weight: 300; 
-    background-color: yellow;
+    font-size: 20px;
+    font-weight: 200; 
     display: flex;
     position: absolute;
     right: 0px;
