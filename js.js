@@ -20,7 +20,7 @@ checkbox.addEventListener('change', function () {
     }
 
     $('#particles-js').toggleClass('dark_mode');
-    $('#neumorphic_layer').toggleClass('dark_mode');
+    $('#card').toggleClass('dark_mode');
     $('#first-layout').toggleClass('dark_mode');
     $('#update_button').toggleClass('dark_mode');
 })
