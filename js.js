@@ -98,6 +98,9 @@ function processToken(token) {
 
     myOwn();
 
+    $('#card').toggleClass('hidden');
+    $('#twitch_wrap').toggleClass('hidden');
+
 }
 
 // function to call twitch api and return data for visitor's list of followed streamers

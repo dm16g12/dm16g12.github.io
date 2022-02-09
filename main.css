@@ -213,6 +213,10 @@ label:active:after {
     background-color: rgba(39, 39, 37, 0.75);
 }
 
+.card.hidden {
+    display: hidden;
+}
+
 .twitch_wrap {
     position: fixed;
     width: 300px;
@@ -221,6 +225,10 @@ label:active:after {
     left: 35px;
     background: transparent;  
     z-index: 20; 
+}
+
+.twitch_wrap.hidden {
+    display: hidden;
 }
 
 .twitch_extension {
