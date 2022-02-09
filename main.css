@@ -262,6 +262,10 @@ label:active:after {
     align-items: flex-end;   
 }
 
+.twitch_div.hidden {
+    display: none;
+}
+
 .twitch_div a {
     position: absolute;
     width: 100%;
