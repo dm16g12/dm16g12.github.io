@@ -1,3 +1,30 @@
+let defaultC = '#212121';
+
+var counter = 0;
+
+var checkbox = document.querySelector('input[name=theme]');
+
+checkbox.addEventListener('change', function () {
+    if (this.checked) {
+        window.pJSDom[0].pJS.particles.line_linked.color = "#eeeeee";
+        window.pJSDom[0].pJS.fn.particlesRefresh();
+        counter += 1;
+        console.log('screen is black ' + counter);
+        defaultC = '#eeeeee';
+    } else {
+        window.pJSDom[0].pJS.particles.line_linked.color = '#212121';
+        window.pJSDom[0].pJS.fn.particlesRefresh();
+        counter += 1;
+        console.log('screen is white ' + counter);
+        defaultC = '#212121';
+    }
+
+    $('#particles-js').toggleClass('dark_mode');
+    $('#neumorphic_layer').toggleClass('dark_mode');
+    $('#first-layout').toggleClass('dark_mode');
+    $('#update_button').toggleClass('dark_mode');
+})
+
 //scripts for crypto prices
 
 let xrp = new WebSocket('wss://stream.binance.com:9443/ws/xrpusdt@trade');
@@ -9,7 +36,7 @@ xrp.onmessage = (event) => {
     let price = parseFloat(stockObject.p).toFixed(2);
     xrpPrice = price;
     stockPriceElement.innerText = `XRP: ${price}`;
-    stockPriceElement.style.color = !lastPrice || lastPrice === price ? '#fff' : price > lastPrice ? 'green' : 'red';
+    stockPriceElement.style.color = !lastPrice || lastPrice === price ? defaultC : price > lastPrice ? 'green' : 'red';
     lastPrice = price;
 
 }
@@ -22,7 +49,7 @@ shib.onmessage = (event) => {
     let stockObject2 = JSON.parse(event.data);
     let price2 = parseFloat(stockObject2.p).toFixed(6);
     stockPriceElement2.innerText = "SHIB: " + price2;
-    stockPriceElement2.style.color = !lastPrice2 || lastPrice2 === price2 ? '#fff' : price2 > lastPrice2 ? 'green' : 'red';
+    stockPriceElement2.style.color = !lastPrice2 || lastPrice2 === price2 ? defaultC : price2 > lastPrice2 ? 'green' : 'red';
     lastPrice2 = price2;
 }
 
@@ -34,7 +61,7 @@ quant.onmessage = (event) => {
     let stockObject3 = JSON.parse(event.data);
     let price3 = parseFloat(stockObject3.p).toFixed(1);
     stockPriceElement3.innerText = "QUANT: " + price3;
-    stockPriceElement3.style.color = !lastPrice3 || lastPrice3 === price3 ? '#fff' : price3 > lastPrice3 ? 'green' : 'red';
+    stockPriceElement3.style.color = !lastPrice3 || lastPrice3 === price3 ? defaultC : price3 > lastPrice3 ? 'green' : 'red';
     lastPrice3 = price3;
 }
 
@@ -46,7 +73,7 @@ xlm.onmessage = (event) => {
     let stockObject4 = JSON.parse(event.data);
     let price4 = parseFloat(stockObject4.p).toFixed(2);
     stockPriceElement4.innerText = "XLM: " + price4;
-    stockPriceElement4.style.color = !lastPrice4 || lastPrice4 === price4 ? '#fff' : price4 > lastPrice4 ? 'green' : 'red';
+    stockPriceElement4.style.color = !lastPrice4 || lastPrice4 === price4 ? defaultC : price4 > lastPrice4 ? 'green' : 'red';
     lastPrice4 = price4;
 }
 
