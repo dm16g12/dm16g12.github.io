@@ -23,7 +23,17 @@ checkbox.addEventListener('change', function () {
     $('#card').toggleClass('dark_mode');
     $('#first-layout').toggleClass('dark_mode');
     $('#update_button').toggleClass('dark_mode');
-})
+    $('#authorize').toggleClass('dark_mode');
+    $('#expand').toggleClass('dark_mode');
+    $('#right_column').toggleClass('dark_mode');
+});
+
+
+//function to make right column expand on span click
+
+$('#expand').on('click', function() {
+    $('#right_column').toggleClass('expanded');
+ });
 
 //scripts for crypto prices
 
