@@ -33,6 +33,8 @@ checkbox.addEventListener('change', function () {
 
 $('#expand').on('click', function() {
     $('#right_column').toggleClass('expanded');
+    $('#arrow1').toggleClass('twist');
+    $('#arrow2').toggleClass('twist');
  });
 
 //scripts for crypto prices

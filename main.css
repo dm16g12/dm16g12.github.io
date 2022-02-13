@@ -189,23 +189,65 @@ h1, h2, p {
     width: 15rem;
 }
 
-#expand {
-    position: absolute;
-    width: auto;
-    top:50%;
-    left: -9rem;
+#expand_div {
+    top: 50%;
+    left: -13rem;
     transform: rotate(270deg);
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+    height: 5rem;
+    width: 20rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#expand {
     font-size: 2.2em;
     font-family: 'Teko', sans-serif;
     background: transparent;
     border: none;
+    margin: 0px;
+    padding: 0px;
 }
 
 #expand.dark_mode {
     color: #eeeeee;
 }
 
+#arrow1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(167, 29, 29);
+    z-index: 130;
+    transform: rotate(90deg);
+    width: 55px;
+    height: 55px;
+    transition-duration: 0.5s;
+}
 
+#arrow1.twist {
+    transform: rotate(270deg);
+}
+
+#arrow2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(167, 29, 29);
+    z-index: 130;
+    transform: rotate(90deg);
+    width: 55px;
+    height: 55px;
+    transition-duration: 0.5s;
+}
+
+#arrow2.twist {
+    transform: rotate(270deg);
+}
 
 .search-bar-container {
     position: fixed;
@@ -421,7 +463,6 @@ label:active:after {
 #particles-js.dark_mode {
     background: #212121;
 }
-
 
 
 
