@@ -154,6 +154,7 @@ async function myOwn(id) {
                         user_login_list.push(user.user_login);
                         view_count_list.push(user.viewer_count);
                         pfp_url.push(user.profile_image_url);
+                        console.log(user.profile_image_url);
 
                     });
                 }
