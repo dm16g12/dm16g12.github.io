@@ -120,6 +120,7 @@ async function myOwn(id) {
 
     let code = await getJson(apiURL);
     let code1 = code.data[0].id;
+    console.log(code1);
 
     let url = new URL('https://api.twitch.tv/helix/streams/followed?user_id=' + code1);
 
