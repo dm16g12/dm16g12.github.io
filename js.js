@@ -95,6 +95,29 @@ var redirect = 'https://dm16g12.github.io';
 // setup a memory space for the token/userID
 var access_token = '';
 
+//function to put commas in viewer count
+function commaify (num) {
+    var num_string,
+      i,
+      len,
+      threes = [],
+      remainders;
+  
+    num_string = num.toString();
+    len = num_string.length;
+    remainders = len % 3;
+  
+  
+    if (remainders != 0) {
+      threes.push(num_string.substr(0, remainders));
+    }
+  
+    for (i = remainders; i < len; i += 3) {
+      threes.push(num_string.substr(i, 3));
+    }
+  
+    return threes.join();
+  }
 
 
 // create div to show status of authorisation/retrieval process
@@ -189,7 +212,7 @@ async function myOwn(id) {
                         let viewers = document.createElement('p');
                         div.append(viewers);
                         viewers.classList.add('viewers');
-                        viewers.textContent = view_count_list[i];
+                        viewers.textContent = commaify(view_count_list[i]);
                     }
 
                 }
