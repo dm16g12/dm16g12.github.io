@@ -209,7 +209,7 @@ async function myOwn() {
 
                 cycle(user_list);
 
-                await getUsers(ids)
+                await getUsers(id_search_params)
                     .then(resp => {
                         if (resp.data.length > 0) {
 
