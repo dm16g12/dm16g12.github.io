@@ -168,7 +168,7 @@ async function myOwn(id) {
                 const view_count_list = [];
                 //const pfp_url = [];
 
-
+                console.log(user_list);
                 //console.log(user.user_name + " " + user.type + " " + user.title + " " + user.viewer_count);
 
                 function cycle(arr) {
