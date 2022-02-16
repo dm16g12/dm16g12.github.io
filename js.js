@@ -166,7 +166,7 @@ async function myOwn(id) {
                 const user_name_list = [];
                 const user_login_list = [];
                 const view_count_list = [];
-                //const pfp_url = [];
+                const title_list = [];
 
                 console.log(user_list);
                 //console.log(user.user_name + " " + user.type + " " + user.title + " " + user.viewer_count);
@@ -176,8 +176,7 @@ async function myOwn(id) {
                         user_name_list.push(user.user_name);
                         user_login_list.push(user.user_login);
                         view_count_list.push(user.viewer_count);
-                        //pfp_url.push(user.profile_image_url);
-                        
+                        title_list.push(user.title);                       
 
                     });
                 }
