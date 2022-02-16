@@ -281,8 +281,9 @@
 
             url.search = new URLSearchParams(users_ids).toString();
 
-            console.log('getUsers(users_id) below');
+            console.log('getUsers(users_id) below and users_id.toString beneath');
             console.log(users_ids);
+            console.log(users_ids.toString());
 
             return fetch(
                 url,
