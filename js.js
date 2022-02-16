@@ -139,7 +139,7 @@ function processToken(token) {
 }
 
 // function to call twitch api and return data for visitor's list of followed streamers
-async function myOwn(id) {
+async function myOwn() {
 
     let code = await getJson(apiURL);
     let code1 = code.data[0].id;
@@ -250,5 +250,5 @@ async function getJson(url) {
     return data;
 }
 
-console.log('first working edn');
+//console.log('first working edn');
 
