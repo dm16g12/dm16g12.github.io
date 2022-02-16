@@ -262,6 +262,9 @@
             let url = new URL('https://api.twitch.tv/helix/streams');
             url.search = new URLSearchParams(params).toString();
 
+            console.log('getStreams(params) below');
+            console.log(params);
+
             return fetch(
                 url,
                 {
@@ -277,6 +280,9 @@
             let url = new URL('https://api.twitch.tv/helix/users');
 
             url.search = new URLSearchParams(users_ids).toString();
+
+            console.log('getUsers(users_id) below');
+            console.log(users_ids);
 
             return fetch(
                 url,
@@ -324,7 +330,8 @@
                         user.profile_image_url = '';
                     });
 
-                    //console.log(users);
+                    console.log("LoadATeam's user's object below");
+                    console.log(users);
 
                     let offset = 0;
                     let offset_end = 0;
@@ -486,6 +493,8 @@
                 // always draw a player
                 if (!did_live) {
                     drawPlayer(team.users[0].user_id);
+                    console.log('something i might be looking for here. IDs used for draw player');
+                    console.log(team.users[0].user_id);
                 }
 
 
