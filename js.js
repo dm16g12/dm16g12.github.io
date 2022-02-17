@@ -238,7 +238,7 @@ async function myOwn() {
 
                         let tester_link = document.createElement('a');
                         tester_container.append(tester_link);
-                        tester_link.setAttribute('href', `#`)
+                        tester_link.setAttribute('href', `https://www.twitch.tv/${user_login_list[i]}`);
                         tester_link.classList.add('tester_link');
 
                         let pfp = document.createElement('span');
