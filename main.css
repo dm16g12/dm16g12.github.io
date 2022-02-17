@@ -336,8 +336,19 @@ h1, h2, p {
     text-decoration: none;
 }
 
+.tester_link::after {
+    content: '';
+    position: absolute;
+    background-color: #eee;
+    height: 1px;
+    width: 96%;
+    z-index: 60;
+    bottom: -10px;
+    left: 2%;
+}
+
 .tester_link:hover {
-    background-color: #07f;
+    background-color: hsla(0, 0%, 0%, 0.1);
     cursor: pointer;
 }
 
@@ -347,7 +358,7 @@ h1, h2, p {
     width: 40px;
     flex-shrink: 0;
     box-sizing: border-box;
-    background-color: aqua;
+    background-color: hsla(0, 0%, 0%, 0.1);
     border-radius: 50%;
     margin-right: 5px;
     background-size: 40px;
@@ -356,7 +367,7 @@ h1, h2, p {
 .tester_tri_cont {
     display: flex;
     flex: 1 1 100%;
-    color: pink;
+    color: #212121;
     justify-content: space-between;
     background-color: transparent;
     padding: 0em;
