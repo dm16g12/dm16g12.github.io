@@ -235,6 +235,9 @@ async function myOwn() {
                         document.getElementById('twitch_extension').appendChild(div);
                         div.classList.add('twitch_div');
 
+                        console.log('pfp in create user');
+                        console.log(pfp_list);
+
                         /*let pfp = document.createElement('span');
                         div.append(pfp);
                         pfp.classList.add('pfp');
