@@ -262,6 +262,7 @@ h1, h2, p {
     background-color: aqua;
     border-radius: 50%;
     margin-right: 5px;
+    background-size: 39px;
 }
 
 .tester_tri_cont {
@@ -295,6 +296,7 @@ h1, h2, p {
 .tit {
     display: block;
     height: 20px;
+    overflow: hidden;
 }
 
 .tester_viewers {
