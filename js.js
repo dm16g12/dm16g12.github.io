@@ -244,7 +244,7 @@ async function myOwn() {
                         let pfp = document.createElement('span');
                         tester_link.append(pfp);
                         pfp.classList.add('tester_pfp');
-                        pfp.style.backgroundImage = url(`${pfp_list[i]}`);
+                        pfp.style.backgroundImage = `url('${pfp_list[i]}')`;
 
                         let tester_tri = document.createElement('div');
                         tester_link.append(tester_tri);
