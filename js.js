@@ -20,12 +20,13 @@ checkbox.addEventListener('change', function () {
     }
 
     $('#particles-js').toggleClass('dark_mode');
-    $('#card').toggleClass('dark_mode');
+    $('#left_column').toggleClass('dark_mode');
     $('#first-layout').toggleClass('dark_mode');
     $('#update_button').toggleClass('dark_mode');
     $('#authorize').toggleClass('dark_mode');
     $('#expand').toggleClass('dark_mode');
     $('#right_column').toggleClass('dark_mode');
+    $('.tester_tri_cont').toggleClass('dark_mode');
 });
 
 
