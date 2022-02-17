@@ -231,36 +231,58 @@ async function myOwn() {
 
                 function createUserDiv() {
                     for (let i = 0; i < user_name_list.length; i++) {
-                        let div = document.createElement('div');
-                        document.getElementById('twitch_extension').appendChild(div);
-                        div.classList.add('twitch_div');
 
-                        console.log('pfp in create user');
-                        console.log(pfp_list);
+                        let tester_container = document.createElement('div');
+                        document.getElementById('twitch_extension').appendChild(tester_container);
+                        tester_container.classList.add('tester_container');
 
-                        /*let pfp = document.createElement('span');
-                        div.append(pfp);
-                        pfp.classList.add('pfp');
-                        pfp.style.backgroundImage = `url('${pfp_url[i]}')`;
-                        */
+                        let tester_link = document.createElement('a');
+                        tester_container.append(tester_link);
+                        tester_link.setAttribute('href', `#`)
+                        tester_link.classList.add('tester_link');
 
-                        let link = document.createElement('a');
-                        div.append(link);
-                        link.setAttribute('href', `https://www.twitch.tv/${user_login_list[i]}`)
+                        let pfp = document.createElement('span');
+                        tester_link.append(pfp);
+                        pfp.classList.add('tester_pfp');
+                        pfp.style.backgroundImage = url(`${pfp_list[i]}`);
 
-                        let span = document.createElement('span');
-                        link.append(span);
-                        span.classList.add('twitch_span');
+                        let tester_tri = document.createElement('div');
+                        tester_link.append(tester_tri);
+                        tester_tri.classList.add('tester_tri_cont');
 
-                        let name = document.createElement('p');
-                        div.append(name);
+                        let name_tit_container = document.createElement('div');
+                        tester_tri.append(name_tit_container);
+                        name_tit_container.classList.add('name_tit_container');
+
+                        let name = document.createElement('div');
                         name.classList.add('name');
-                        name.textContent = user_name_list[i];
+                        let name_content = document.createElement('p');
+                        name_content.innerText = user_name_list[i];
+                        name.append(name_content);
+                        name_tit_container.append(name);
 
-                        let viewers = document.createElement('p');
-                        div.append(viewers);
-                        viewers.classList.add('viewers');
-                        viewers.textContent = commaify(view_count_list[i]);
+                        let title = document.createElement('div');
+                        let title_content = document.createElement('p');
+                        title_content.textContent = title_list[i];
+                        title.append(title_content);
+                        title.classList.add('tit');
+                        name_tit_container.append(title);
+
+                        let viewers = document.createElement('div');
+                        tester_tri.append(viewers);
+                        viewers.classList.add('tester_viewers');
+
+                        let red = document.createElement('span');
+                        viewers.append(red);
+                        red.classList.add('red_button');
+
+                        let viewer_count = document.createElement('div');
+                        viewers.append(viewer_count);
+                        let count_number = document.createElement('span');
+                        viewer_count.appendChild(count_number);
+                        count_number.innerText = commaify(view_count_list[i]);
+
+
                     }
 
                 }
