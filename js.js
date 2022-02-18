@@ -135,7 +135,7 @@ function processToken(token) {
     myOwn();
 
     //$('#card').toggleClass('hidden');
-    $('#twitch_wrap').toggleClass('hidden');
+    //$('#twitch_wrap').toggleClass('hidden');
 
 }
 
