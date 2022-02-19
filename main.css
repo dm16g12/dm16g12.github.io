@@ -363,8 +363,6 @@ h1, h2, p {
     display: flex;
     align-items: center;
     padding-right: 10px;
-    
-    font-size: 1.2em;
 }
 
 .red_button {
