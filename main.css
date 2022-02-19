@@ -344,11 +344,13 @@ h1, h2, p {
     display: block;
     padding: 0em;
     height: 40px;
+    font-size: 1em;
 }
 
 .name {
     display: flex; 
     height: 20px;
+    overflow: hidden;
 }
 
 .tit {
