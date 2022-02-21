@@ -253,6 +253,7 @@ async function myOwn() {
                         let tester_tri = document.createElement('div');
                         tester_link.append(tester_tri);
                         tester_tri.classList.add('tester_tri_cont');
+                        tester_tri.classList.add('toggle1');
 
                         let name_tit_container = document.createElement('div');
                         tester_tri.append(name_tit_container);
