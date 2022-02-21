@@ -343,12 +343,15 @@ box-shadow:
 }
 
 .tester_container:hover:before {
+    box-shadow: inset -3px -3px 7px #ffffff,
+              inset 3px 3px 5px #ceced1;
     border-radius: 6px;
 }
 
 .tester_container:hover:before.dark_mode {
     box-shadow: inset -3px -3px 7px rgba(255, 255, 255, 0.05),
                 inset 3px 3px 5px rgba(0, 0, 0, 0.5);  
+    border-radius: 6px;
 }
 
 .tester_link {
