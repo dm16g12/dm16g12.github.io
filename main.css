@@ -385,7 +385,7 @@ box-shadow:
 }
 
 .tester_pfp {
-    display: block;
+    display: flex;
     height: 37px;
     width: 37px;
     flex-shrink: 0;
@@ -394,6 +394,8 @@ box-shadow:
     border-radius: 50%;
     margin-right: 5px;
     background-size: 39px;
+    justify-content: center;
+    align-items: center;
 }
 
 .tester_tri_cont {
