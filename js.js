@@ -4,6 +4,8 @@ var counter = 0;
 
 var checkbox = document.querySelector('input[name=theme]');
 
+var darkMode = document.querySelectorAll('.dark_mode');
+
 checkbox.addEventListener('change', function () {
     if (this.checked) {
         window.pJSDom[0].pJS.particles.line_linked.color = "#eeeeee";
@@ -19,14 +21,7 @@ checkbox.addEventListener('change', function () {
         defaultC = '#212121';
     }
 
-    $('#particles-js').toggleClass('dark_mode');
-    $('#left_column').toggleClass('dark_mode');
-    $('#first-layout').toggleClass('dark_mode');
-    $('#update_button').toggleClass('dark_mode');
-    $('#authorize').toggleClass('dark_mode');
-    $('#expand').toggleClass('dark_mode');
-    $('#right_column').toggleClass('dark_mode');
-    $('.tester_tri_cont').toggleClass('dark_mode');
+    $('.dark_mode').toggle();
 });
 
 
