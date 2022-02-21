@@ -4,7 +4,9 @@ var counter = 0;
 
 var checkbox = document.querySelector('input[name=theme]');
 
-var darkMode = document.querySelectorAll('.dark_mode');
+var toggle1 = document.querySelectorAll('.toggle1');
+var darkMode = document.querySelectorAll('dark_mode');
+
 
 checkbox.addEventListener('change', function () {
     if (this.checked) {
@@ -13,15 +15,20 @@ checkbox.addEventListener('change', function () {
         counter += 1;
         console.log('screen is black ' + counter);
         defaultC = '#eeeeee';
+        $(this).parentsUntil(".container-fluid")
+       
     } else {
         window.pJSDom[0].pJS.particles.line_linked.color = '#212121';
         window.pJSDom[0].pJS.fn.particlesRefresh();
         counter += 1;
         console.log('screen is white ' + counter);
         defaultC = '#212121';
+        $(this).parentsUntil("#first-layout")
+       
     }
 
-    $('.dark_mode').toggle();
+    $(this).parentsUntil(".container-fluid")
+       .find(".toggle1").toggleClass("dark_mode");
 });
 
 
