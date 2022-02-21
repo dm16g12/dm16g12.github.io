@@ -563,7 +563,7 @@ box-shadow:
 }
 
 #expand.dark_mode {
-    color: #eeeeee;
+    color: rgb(180, 180, 180);
 }
 
 .rotate {
