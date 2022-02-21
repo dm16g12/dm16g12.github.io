@@ -329,9 +329,12 @@ box-shadow:
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  box-shadow: inset -3px -3px 7px #ffffff,
-              inset 3px 3px 5px #ceced1;
+  bottom: 0; 
+   box-shadow: inset -3px -3px 7px #ffffff,
+              inset 3px 3px 1px #ceced1;
+   box-shadow:
+      -8px -4px 8px 0px #ffffff,
+      8px 4px 12px 0px #ceced1;
 } 
 
 .tester_container:hover.dark_mode {
