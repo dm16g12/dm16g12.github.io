@@ -237,7 +237,8 @@ async function myOwn() {
 
                         let tester_container = document.createElement('div');
                         document.getElementById('twitch_extension').appendChild(tester_container);
-                        tester_container.classList.add('tester_container toggle1');
+                        tester_container.classList.add('tester_container');
+                        tester_container.classList.add('toggle1');
 
                         let tester_link = document.createElement('a');
                         tester_container.append(tester_link);
