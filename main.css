@@ -83,7 +83,7 @@ h1, h2, p {
     position: relative;
     overflow: hidden;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: transparent;
 }
@@ -95,7 +95,7 @@ h1, h2, p {
 #left_column {
     width: 350px;
     height: 100%;
-    position: absolute;
+    position: static;
     display: flex;
     left: 0px;
     margin: 0px 0px 0px 0px;
@@ -450,24 +450,24 @@ box-shadow:
 #right_column {
     width: 5rem;
     height: 100%;
-    min-height: 1175px;
+    /*min-height: 750px;*/
     right: 0px;
-    position: absolute;
+    position: static;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
     transition-duration: 1s;    
-    padding-top: 10rem; 
+    /*padding-top: 10rem; 
     padding-bottom: 15rem;
-    padding-right: 7px;
+    padding-right: 7px;*/
     perspective: 800px;
     background: #ecf0f3;
     box-shadow: -3px -3px 7px #ffffff,
              3px 3px 5px #ceced1,
              inset -3px -3px 7px #ffffff,
              inset 3px 3px 5px #ceced1;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
     z-index: 80;
 }
 
@@ -489,13 +489,20 @@ box-shadow:
     position: relative;
     width: 4rem;
     height: 4rem;
+    min-height: 4rem;
     border-radius: 50%;
-    
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     text-decoration: none;
     color: #212121;
     box-shadow: -3px -3px 7px #ffffff,
                 3px 3px 5px #ceced1;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
+}
+
+.frequent_links.expanded {
+    width: 12rem;
+    border-radius: 6px;
 }
 
 .frequent_links.dark_mode {
@@ -540,8 +547,8 @@ box-shadow:
 
 .link_span {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 4rem;
+    height: 4rem;
     font-size: x-small;
     background-color: transparent;
     display: flex;
@@ -611,15 +618,16 @@ box-shadow:
 }
 
 .search-bar-container {
-    
+    position: static;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    width: 800px;
+    width: 30%;
+    min-width: 200px;
     height: 350px;
-    left: 50%;
+    padding: 0 2rem;
     background: #ecf0f3;
     box-shadow: -3px -3px 7px #ffffff,
              3px 3px 5px #ceced1,
@@ -635,6 +643,19 @@ box-shadow:
              3px 3px 5px rgba(0, 0, 0, 0.5),
              inset -3px -3px 7px rgba(255, 255, 255, 0.05),
              inset 3px 3px 5px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.search-bar {
+    width: 60%;
+    min-width: 1rem;
 }
 
 .search-bar.dark_mode {
@@ -655,44 +676,49 @@ input.dark_mode {
     box-shadow: inset -0.6rem -0.6rem 1.2rem rgba(0, 0, 0, 0.5),
                 inset 0.6rem 0.6rem 1.2rem rgba(255, 255, 255, 0.05);
     color: #ccc;
+    transition: all 0.3s ease-in-out;
 }
  
 input:hover {
     box-shadow: inset 0.2rem 0.2rem 0.4rem #cfcfcf,
        inset -0.2rem -0.2rem 0.4rem #fff;
+       transition: all 0.3s ease-in-out;
 }
 
 input:hover.dark_mode {
     box-shadow: -3px -3px 7px rgba(0, 0, 0, 0.5),
                 3px 3px 5px rgba(255, 255, 255, 0.05);
+                transition: all 0.3s ease-in-out;
 }
  
  
 .submit-btn {
+    width: auto;
     font-family: inherit;
-    font-weight: 700;
+    font-weight: 500;
     border: none;
     margin-left: 15px;
-    padding: 1rem 3rem;
+    padding: 1rem 1.5rem;
     background: linear-gradient(145deg, #dcdcdc, #fff);
     border-radius: 40px;
     box-shadow: -3px -3px 7px #ffffff,
                 3px 3px 5px #ceced1;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
 }
 
 .submit-btn.dark_mode {
     background: #131419;
     box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.05),
                 3px 3px 5px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
 }
 
 .toggle-container {
     width: auto;
     height: auto;
     position: absolute;
-    top: 5.5rem;
-    right: 6.5rem;
+    left: -15rem;
+    top: 7rem;
     z-index: 101;
 }
 

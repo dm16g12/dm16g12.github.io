@@ -35,6 +35,7 @@ checkbox.addEventListener('change', function () {
 //function to make right column expand on span click
 
 $('#expand').on('click', function () {
+    $('.frequent_links').toggleClass('expanded');
     $('#right_column').toggleClass('expanded');
     $('#arrow1').toggleClass('twist');
     $('#arrow2').toggleClass('twist');
