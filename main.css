@@ -498,11 +498,16 @@ box-shadow:
     box-shadow: -3px -3px 7px #ffffff,
                 3px 3px 5px #ceced1;
     transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .frequent_links.expanded {
     width: 12rem;
     border-radius: 6px;
+    justify-content: flex-start;
+    
 }
 
 .frequent_links.dark_mode {
@@ -556,6 +561,20 @@ box-shadow:
     align-items: center;
 }
 
+.link_text {
+    position: absolute;
+    display: none;
+    transition: all 0.9s ease-in-out;
+    left: 4rem;
+    padding-top: 1rem;
+}
+
+.link_text.seen {
+    display: flex;
+    transition: all 0.9s ease-in-out;
+    
+}
+
 #expand_div {
     top: 50%;
     left: -13rem;
@@ -573,6 +592,7 @@ box-shadow:
 #expand {
     font-size: 2.2em;
     font-family: 'Teko', sans-serif;
+    /*font-weight: 700;*/
     background: transparent;
     border: none;
     margin: 0px;
