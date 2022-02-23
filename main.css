@@ -844,6 +844,71 @@ input:hover.dark_mode {
     background: #131419;
 }
 
+@media only screen and (max-width: 1400px) {
+    #first-layout {
+       color: red; 
+        
+    }
+
+    #left_column {
+        position: absolute;
+        height: 50%;
+        width: 350px;
+        top: calc(8rem + 150px);
+        left: 25%;
+        align-items: flex-end;
+        margin: 0px;
+        z-index: 2;
+    }
+
+    #right_column {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 50%;
+        width: 350px;
+        top: calc(8rem + 150px);
+        left: calc(25% + 350px);
+        margin: 0px;
+        z-index: 3;
+    }
+
+    #right_column.expanded {
+        width: 350px;
+        overflow-y: scroll;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .frequent_links {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .link_text {
+        left: 4.5rem;
+    }
+
+    #expand_div {
+        display: none;
+    }
+
+    .toggle-container {
+        top: -1rem;
+        left: -2rem;
+    }
+
+    .search-bar-container {
+        position: absolute;
+        height: 150px;
+        width: 700px;
+        left: 25%;
+        top: 8rem;
+        z-index: 1;
+    }
+}
+
 
 
 
