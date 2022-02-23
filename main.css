@@ -3,6 +3,7 @@ body {
     right: 0px;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 #big-box {
@@ -49,7 +50,7 @@ section {
     padding-left: 100%;
     box-sizing: content-box;
     margin-left: -13px;
-    z-index: 15;
+    
 }
 .ticker-wrap .ticker {
     display: inline-block;
@@ -92,6 +93,17 @@ h1, h2, p {
     color: #fff;
 }
 
+.manager {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+}
+
 #left_column {
     width: 350px;
     height: 100%;
@@ -102,7 +114,7 @@ h1, h2, p {
     align-items: flex-end;
     top: 0px;
     /*border-style: solid;*/
-    z-index: 200;
+    
     justify-content: center;
     flex-wrap: wrap;
     padding-bottom: 5px;
@@ -369,17 +381,6 @@ box-shadow:
     border-radius: 10px;
 }
 
-/*.tester_link::after {
-    content: '';
-    position: absolute;
-    background-color: #eee;
-    height: 1px;
-    width: 96%;
-    z-index: 60;
-    bottom: -4px;
-    left: 2%;
-}*/
-
 .tester_link:hover {
     cursor: pointer;    
 }
@@ -468,7 +469,6 @@ box-shadow:
              inset -3px -3px 7px #ffffff,
              inset 3px 3px 5px #ceced1;
     transition: all 0.3s ease-in-out;
-    z-index: 80;
 }
 
 #right_column.dark_mode {
@@ -477,12 +477,12 @@ box-shadow:
              3px 3px 5px rgba(0, 0, 0, 0.5),
              inset -3px -3px 7px rgba(255, 255, 255, 0.05),
              inset 3px 3px 5px rgba(0, 0, 0, 0.5);
+    width: 7rem;
 } 
 
 #right_column.expanded {
     width: 15rem;
     padding-right: 10px;
-    
 }
 
 .frequent_links {
@@ -501,31 +501,44 @@ box-shadow:
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.3s ease-in-out;
+    
+}
+
+.frequent_links.dark_mode {
+    box-shadow:
+      -8px -4px 8px 0px rgba(255, 255, 255, 0.05),
+      8px 4px 12px 0px rgba(0, 0, 0, 0.5),
+      4px 4px 4px 0px rgba(255, 255, 255, 0.05) inset,
+      -4px -4px 4px 0px rgba(0, 0, 0, 0.5) inset;
+    background: #131419;
+    color: rgb(180, 180, 180);
+    width: 5rem;
+    height: 5rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
 }
 
 .frequent_links.expanded {
     width: 12rem;
     border-radius: 6px;
-    justify-content: flex-start;
-    
-}
-
-.frequent_links.dark_mode {
-    box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.05),
-                3px 3px 5px rgba(0, 0, 0, 0.5);
-    color: rgb(180, 180, 180);
+    justify-content: flex-start;  
 }
 
 .frequent_links:hover {
     box-shadow: inset -3px -3px 7px #ffffff,
               inset 3px 3px 5px #ceced1; 
     color: rgb(51, 174, 190);
+    transition: all 0.3s ease-in-out;
 }
 
 .frequent_links:hover.dark_mode {
-    box-shadow: inset -3px -3px 7px rgba(255, 255, 255, 0.05),
-                inset 3px 3px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: inset -3px -3px 7px rgba(0, 0, 0, 0.5),
+    inset 3px 3px 5px rgba(255, 255, 255, 0.05); 
+color: rgb(180, 180, 180);
+box-shadow:
+-8px -4px 8px 0px rgba(0, 0, 0, 0.5),
+8px 4px 12px 0px rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease-in-out;
 }
 
 .frequent_links:hover:before.dark_mode {
@@ -666,8 +679,6 @@ box-shadow:
              3px 3px 5px #ceced1,
              inset -3px -3px 7px #ffffff,
              inset 3px 3px 5px #ceced1;
-    transition: all 0.3s ease;
-    z-index: 100;
 }
 
 .search-bar-container.dark_mode {
@@ -762,7 +773,6 @@ input:hover.dark_mode {
     position: absolute;
     left: -15rem;
     top: 7rem;
-    z-index: 101;
 }
 
 .toggle-container.dark_mode {
@@ -847,18 +857,23 @@ input:hover.dark_mode {
 @media only screen and (max-width: 1400px) {
     #first-layout {
        color: red; 
-        
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+
+    .manager {
+        position: relative;
+        width: 700px;
     }
 
     #left_column {
         position: absolute;
         height: 50%;
         width: 350px;
-        top: calc(8rem + 150px);
-        left: 25%;
+        top: calc(8rem + 150px);      
         align-items: flex-end;
         margin: 0px;
-        z-index: 2;
     }
 
     #right_column {
@@ -868,17 +883,15 @@ input:hover.dark_mode {
         flex-wrap: wrap;
         height: 50%;
         width: 350px;
-        top: calc(8rem + 150px);
-        left: calc(25% + 350px);
+        top: calc(8rem + 150px);      
         margin: 0px;
-        z-index: 3;
     }
 
     #right_column.expanded {
         width: 350px;
         overflow-y: scroll;
         padding-top: 1rem;
-        padding-bottom: 1rem;
+        padding-bottom: 3rem;
     }
 
     .frequent_links {
@@ -891,21 +904,69 @@ input:hover.dark_mode {
     }
 
     #expand_div {
+        left: 12rem;
         display: none;
     }
 
     .toggle-container {
-        top: -1rem;
-        left: -2rem;
+        top: 3rem;
+        left: -17rem;
     }
 
     .search-bar-container {
         position: absolute;
         height: 150px;
-        width: 700px;
-        left: 25%;
+        width: 700px;        
         top: 8rem;
-        z-index: 1;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    #first-layout {
+        color: red;
+    }
+
+    .manager {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding-top: 15rem;
+        padding-bottom: 3rem;
+        
+    }
+
+    #left_column {
+        position: static;
+        height: 500px;
+    }
+
+    #authorize {
+        margin: 0px;
+    }
+
+    #twitch_wrap {
+        margin: 0px;
+        margin-top: 1rem;
+    }
+
+    #right_column {
+        position: static;
+        z-index: 300;
+        height: 426px;
+        min-height: 288px;
+    }
+
+    .search-bar-container {
+        position: absolute;
+        width: 350px;
+        height: 100px;
+    }
+
+    .toggle-container {
+        position: absolute;
+        left: 3.5rem;
+        top: -25rem;
     }
 }
 
