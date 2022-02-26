@@ -670,8 +670,8 @@ box-shadow:
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    width: 30%;
-    min-width: 200px;
+    width: 40%;
+    min-width: 500px;
     height: 350px;
     padding: 0 2rem;
     background: #ecf0f3;
@@ -984,8 +984,27 @@ input:hover.dark_mode {
     .search-bar-container {
         position: absolute;
         width: 350px;
+        min-width: 350px;
         height: 100px;
     }
+
+    .search-bar {
+        width: 1rem; 
+    }
+
+    .search-bar::selection{
+        width: 2rem;
+    }
+
+    .icon {
+        left: 15px;
+    }
+
+    /*input {
+        padding: 2rem;
+        width: 1rem;
+        height: 1rem;
+    }*/
 
     .toggle-container {
         position: static;
