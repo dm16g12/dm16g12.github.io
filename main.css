@@ -870,7 +870,7 @@ input:hover.dark_mode {
 
     #left_column {
         position: absolute;
-        height: 700px;
+        height: 500px;
         width: 350px;
         top: calc(8rem + 150px);      
         align-items: flex-end;
@@ -886,13 +886,13 @@ input:hover.dark_mode {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
-        height: 700px;
+        height: 500px;
         width: 350px;
         top: calc(8rem + 150px);      
         margin: 0px;
-        padding: 0px;
+        padding: 2rem 1rem;
         overflow: hidden;   
     }
 
@@ -901,6 +901,7 @@ input:hover.dark_mode {
         flex-direction: row;
         flex-wrap: wrap;
         width: 350px;
+        padding: 2rem 0.4rem;
 
     }
 
@@ -932,9 +933,10 @@ input:hover.dark_mode {
 
     .toggle-container {
        position: fixed;
-       top: 2rem;
+       top: 1.5rem;
        left: 5rem;
-       width: auto;     
+       width: auto;  
+       margin-bottom: 10px;   
     }
 
     .search-bar-container {
