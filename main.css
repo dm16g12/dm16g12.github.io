@@ -824,7 +824,7 @@ input:hover.dark_mode {
 .indicator {
     height: 100%;
     width: 200%;
-    background: #ecf0f3;
+    background: transparent;
     border-radius: 15px;
     transform: translate3d(-75%, 0, 0);
     transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35);
@@ -834,7 +834,7 @@ input:hover.dark_mode {
 }
 
 .indicator.dark_mode {
-    background: #131419;
+    background: transparent;
     box-shadow:
       -8px -4px 8px 0px rgba(255, 255, 255, 0.05),
       8px 4px 12px 0px rgba(0, 0, 0, 0.5);
@@ -1010,6 +1010,7 @@ input:hover.dark_mode {
 
     .toggle-container {
         position: static;
+        margin-top: 20px;
     }
 }
 
