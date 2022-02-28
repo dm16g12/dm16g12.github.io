@@ -31,6 +31,12 @@ checkbox.addEventListener('change', function () {
        .find(".toggle1").toggleClass("dark_mode");
 });
 
+//function to make the Q move on small width search bar
+/*$('.search-bar').on('focus', function () {
+    $('.icon').css({left:'-0.3rem'});
+})*/
+
+
 
 //function to make right column expand on span click
 

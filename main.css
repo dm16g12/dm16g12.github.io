@@ -707,6 +707,7 @@ box-shadow:
 
 .search-bar.dark_mode {
     background-color: #131419;
+    color: #eee;
 }
 
 input {
@@ -990,23 +991,48 @@ input:hover.dark_mode {
         height: 100px;
     }
 
-    .search-bar {
-        width: 1rem; 
+    .form {
+        width: 320px;
     }
 
-    .search-bar::selection{
-        width: 2rem;
+    .search-bar {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        padding: 0%;
+        color: transparent;
+        transition: all 0.3s ease-in;
+    }
+
+    .search-bar.dark_mode {
+        color: transparent;
+    }
+
+    .search-bar:focus {
+        width: 15rem;
+        border-radius: 50px;
+        color: #212121;
+        padding-left: 2.5rem;
+        transition: all linear 0.3s ease-in;
+    }
+
+    .search-bar:focus ~ .icon {
+        position: absolute;
+        left: 0px;
+        transition: all 0.3s ease-in;
+    }
+
+    .search-bar:focus.dark_mode {
+        color: #eee;
+        padding-left: 2.5rem;
     }
 
     .icon {
-        left: 15px;
+        position: absolute;
+        margin-left: 1rem;
     }
 
-    /*input {
-        padding: 2rem;
-        width: 1rem;
-        height: 1rem;
-    }*/
+    
 
     .toggle-container {
         position: static;
