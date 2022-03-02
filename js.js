@@ -15,8 +15,9 @@ checkbox.addEventListener('change', function () {
         counter += 1;
         console.log('screen is black ' + counter);
         defaultC = '#eeeeee';
-        $('.tester_container').classList.add('dark_mode1');
-        $('.tester_tri_cont').classList.add('dark_mode1');
+        //dark_mode1();      
+        
+
        
     } else {
         window.pJSDom[0].pJS.particles.line_linked.color = '#212121';
@@ -24,13 +25,24 @@ checkbox.addEventListener('change', function () {
         counter += 1;
         console.log('screen is white ' + counter);
         defaultC = '#212121';
-        $(this).parentsUntil("#first-layout")
+        //dark_mode1();      
+        
        
     }
 
     $(this).parentsUntil(".container-fluid")
        .find(".toggle1").toggleClass("dark_mode");
 });
+
+//changing dark_mode on tester container
+
+    if (counter % 2 == 0) {
+        $('.tester_container').classList.add('dark_mode1');
+        $('.tester_tri_cont').classList.add('dark_mode1');
+    } else {
+        $('.tester_container').classList.remove('dark_mode1');
+        $('.tester_tri_cont').classList.remove('dark_mode1');
+    }
 
 //function to make the Q move on small width search bar
 /*$('.search-bar').on('focus', function () {
