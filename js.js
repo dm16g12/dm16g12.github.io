@@ -15,7 +15,8 @@ checkbox.addEventListener('change', function () {
         counter += 1;
         console.log('screen is black ' + counter);
         defaultC = '#eeeeee';
-        $(this).parentsUntil(".container-fluid")
+        $('.tester_container').classList.add('dark_mode1');
+        $('.tester_tri_cont').classList.add('dark_mode1');
        
     } else {
         window.pJSDom[0].pJS.particles.line_linked.color = '#212121';
