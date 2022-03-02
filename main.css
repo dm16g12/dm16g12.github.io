@@ -350,7 +350,7 @@ box-shadow:
       8px 4px 12px 0px #ffffff;
 } 
 
-.tester_container:hover.dark_mode1 {
+.tester_container:hover.dark_mode {
     box-shadow: inset -3px -3px 7px rgba(0, 0, 0, 0.5),
               inset 3px 3px 1px rgba(255, 255, 255, 0.05); 
     box-shadow:
@@ -364,7 +364,7 @@ box-shadow:
     border-radius: 6px;
 }
 
-.tester_container:hover:before.dark_mode1 {
+.tester_container:hover:before.dark_mode {
     box-shadow: inset -3px -3px 7px rgba(255, 255, 255, 0.05),
                 inset 3px 3px 5px rgba(0, 0, 0, 0.5);  
     border-radius: 6px;
@@ -409,7 +409,7 @@ box-shadow:
     font-family: 'Inter', sans-serif;
 }
 
-.tester_tri_cont.dark_mode1 {
+.tester_tri_cont.dark_mode {
     color: rgb(180, 180, 180);
 }
 
