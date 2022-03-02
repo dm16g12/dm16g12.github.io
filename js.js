@@ -35,7 +35,7 @@ checkbox.addEventListener('change', function () {
 });
 
 //changing dark_mode on tester container
-
+/*
     if (counter % 2 == 0) {
         $('.tester_container').classList.add('dark_mode1');
         $('.tester_tri_cont').classList.add('dark_mode1');
@@ -43,6 +43,7 @@ checkbox.addEventListener('change', function () {
         $('.tester_container').classList.remove('dark_mode1');
         $('.tester_tri_cont').classList.remove('dark_mode1');
     }
+*/
 
 //function to make the Q move on small width search bar
 /*$('.search-bar').on('focus', function () {
