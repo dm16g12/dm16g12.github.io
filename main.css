@@ -1,18 +1,9 @@
 body {
     background: #ecf0f3;
     right: 0px;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-#big-box {
-    width: 100vw;
-    padding: 0;
-    overflow: hidden;
-    height: 100vh;
-    position: relative;
-    transition-duration: 1s;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
 }
 
 section {
@@ -49,7 +40,7 @@ section {
     background-color: rgba(0, 0, 0, 0);
     padding-left: 100%;
     box-sizing: content-box;
-    margin-left: -13px;
+    
     
 }
 .ticker-wrap .ticker {
@@ -82,11 +73,13 @@ h1, h2, p {
 
 #first-layout {
     position: relative;
-    overflow: hidden;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+    
 }
 
 #first-layout.dark_mode {
@@ -97,7 +90,6 @@ h1, h2, p {
     width: 100%;
     height: 100%;
     position: relative;
-    overflow: hidden;
     display: flex;
     justify-content: space-between;
     align-items: center;
